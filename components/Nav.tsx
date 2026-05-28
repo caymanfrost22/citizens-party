@@ -25,7 +25,7 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-black text-lg">
           <span className="text-2xl">🦅</span>
-          <span style={{ color: '#f5a623' }}>The People&apos;s Party</span>
+          <span style={{ color: '#f5a623' }}>The Citizens Party</span>
         </Link>
 
         {/* Desktop links */}

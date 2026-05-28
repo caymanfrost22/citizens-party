@@ -190,7 +190,7 @@ export default async function Home() {
           </h2>
           <p className="text-[#8fa3bc] text-lg mb-8">
             Join thousands of Americans who are done picking between two bad options.
-            The People&apos;s Party is building something different.
+            The Citizens Party is building something different.
           </p>
           <Link href="/join"
             className="inline-block px-10 py-4 rounded-full font-black text-xl text-[#0a1628] transition-all hover:scale-105 hover:shadow-2xl"

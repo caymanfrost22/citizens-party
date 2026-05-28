@@ -6,7 +6,7 @@ export default function Footer() {
       style={{ background: '#070f1d' }}>
       <div className="max-w-4xl mx-auto">
         <div className="text-2xl font-black mb-1" style={{ color: '#f5a623' }}>
-          🦅 The People&apos;s Party
+          🦅 The Citizens Party
         </div>
         <p className="text-[#8fa3bc] text-sm mb-4">
           Not Left. Not Right. <strong className="text-white">Forward.</strong>
@@ -26,7 +26,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="text-xs text-white/20">
-          © {new Date().getFullYear()} The People&apos;s Party · Research sources: CBO, GAO, Tax Foundation, Brookings, Yale Budget Lab, FEC
+          © {new Date().getFullYear()} The Citizens Party · Research sources: CBO, GAO, Tax Foundation, Brookings, Yale Budget Lab, FEC
         </p>
       </div>
     </footer>

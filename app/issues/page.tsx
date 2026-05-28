@@ -50,7 +50,7 @@ export default async function IssuesPage() {
           </div>
           <div className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
             style={{ background: 'rgba(6,214,160,0.1)', border: '1px solid rgba(6,214,160,0.3)', color: '#06d6a0' }}>
-            🟢 People&apos;s Party
+            🟢 Citizens Party
           </div>
         </div>
 
@@ -91,7 +91,7 @@ export default async function IssuesPage() {
                 <th className="text-left p-4 text-sm font-bold w-32" style={{ color: '#f5a623' }}>Issue</th>
                 <th className="p-4 text-sm font-bold" style={{ color: '#3b82f6' }}>🔵 Democrats</th>
                 <th className="p-4 text-sm font-bold" style={{ color: '#ef4444' }}>🔴 Republicans</th>
-                <th className="p-4 text-sm font-bold" style={{ color: '#06d6a0' }}>🟢 People&apos;s Party</th>
+                <th className="p-4 text-sm font-bold" style={{ color: '#06d6a0' }}>🟢 Citizens Party</th>
               </tr>
             </thead>
             <tbody>
@@ -128,7 +128,7 @@ export default async function IssuesPage() {
           <p className="text-sm" style={{ color: '#8fa3bc' }}>
             <strong className="text-white">The Pattern:</strong> Both parties have taken corporate donor positions dressed up as ideology.
             Democrats protect trial lawyers and public unions. Republicans protect Wall Street and defense contractors.
-            Neither actually serves median Americans. The People&apos;s Party has <strong className="text-white">no corporate donors — by design.</strong>
+            Neither actually serves median Americans. The Citizens Party has <strong className="text-white">no corporate donors — by design.</strong>
           </p>
         </div>
       </div>

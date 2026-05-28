@@ -43,7 +43,7 @@ export default function JoinPage() {
           <div className="text-7xl mb-6">🎉</div>
           <h1 className="text-4xl font-black text-white mb-4">You're In!</h1>
           <p className="text-xl mb-6" style={{ color: '#8fa3bc' }}>
-            Welcome to The People's Party, {form.name || 'patriot'}. You just joined a movement that puts people over politics.
+            Welcome to The Citizens Party, {form.name || 'patriot'}. You just joined a movement that puts people over politics.
           </p>
           <div
             className="rounded-2xl p-6 mb-8 text-left"
@@ -88,7 +88,7 @@ export default function JoinPage() {
             <span style={{ color: '#f5a623' }}>change to happen?</span>
           </h1>
           <p className="text-xl" style={{ color: '#8fa3bc' }}>
-            The People's Party isn't backed by billionaires or corporations. It's backed by people like you — who
+            The Citizens Party isn't backed by billionaires or corporations. It's backed by people like you — who
             believe America deserves better than choosing between two broken options.
           </p>
         </div>

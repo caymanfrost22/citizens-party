@@ -249,7 +249,7 @@ export default function AdminDashboard() {
           <span className="text-2xl">🛡️</span>
           <div>
             <div className="font-black text-white">Admin Dashboard</div>
-            <div className="text-xs" style={{ color: '#8fa3bc' }}>The People's Party</div>
+            <div className="text-xs" style={{ color: '#8fa3bc' }}>The Citizens Party</div>
           </div>
         </div>
 

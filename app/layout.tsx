@@ -4,10 +4,10 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "The People's Party — Not Left. Not Right. Forward.",
+  title: "The Citizens Party — Not Left. Not Right. Forward.",
   description: "A People-First political movement to break the two-party stranglehold, eliminate government waste, and restore government for the people, by the people.",
   openGraph: {
-    title: "The People's Party",
+    title: "The Citizens Party",
     description: "Not Left. Not Right. Forward.",
     type: "website",
   },

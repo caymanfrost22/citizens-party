@@ -168,7 +168,7 @@ function TaxCalculator() {
         </div>
 
         <div className="p-5 rounded-2xl" style={{ background: '#0d1f38', border: '1px solid rgba(6,214,160,0.3)' }}>
-          <div className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#06d6a0' }}>People&apos;s Party Plan</div>
+          <div className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#06d6a0' }}>Citizens Party Plan</div>
           <div className="space-y-2 text-sm mb-4">
             <div className="flex justify-between">
               <span style={{ color: '#8fa3bc' }}>Federal Income Tax</span>

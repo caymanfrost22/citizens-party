@@ -338,7 +338,7 @@ export default function ImmigrationPage() {
                   Under current interpretation, any person born on US soil is automatically a citizen — regardless of their parents&apos; immigration status. This includes children of undocumented immigrants, tourists, and temporary visa holders.
                 </p>
                 <div className="p-3 rounded-xl text-sm" style={{ background: 'rgba(200,16,46,0.08)', border: '1px solid rgba(200,16,46,0.2)', color: '#fca5a5' }}>
-                  <strong>People&apos;s Party Position:</strong> End birthright citizenship for children born to parents who are neither citizens nor LPRs. This requires a constitutional amendment (2/3 Congress + 3/4 states) — the legitimate, transparent path.
+                  <strong>Citizens Party Position:</strong> End birthright citizenship for children born to parents who are neither citizens nor LPRs. This requires a constitutional amendment (2/3 Congress + 3/4 states) — the legitimate, transparent path.
                 </div>
               </div>
               <div className="p-6 rounded-2xl" style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}>
@@ -349,7 +349,7 @@ export default function ImmigrationPage() {
                   <div>• <strong className="text-white">Children of US citizens:</strong> May acquire citizenship at birth even if born abroad</div>
                 </div>
                 <div className="mt-4 p-3 rounded-xl text-sm" style={{ background: 'rgba(245,166,35,0.08)', border: '1px solid rgba(245,166,35,0.2)', color: '#f5a623' }}>
-                  <strong>People&apos;s Party Position:</strong> Maintain and expand the military service path. Those who defend the country earn citizenship.
+                  <strong>Citizens Party Position:</strong> Maintain and expand the military service path. Those who defend the country earn citizenship.
                 </div>
               </div>
             </div>
@@ -445,7 +445,7 @@ export default function ImmigrationPage() {
             <div className="hidden md:grid grid-cols-3 gap-0 px-5 py-3" style={{ background: '#0d1f38' }}>
               <div className="text-xs font-bold uppercase tracking-widest" style={{ color: '#f5a623' }}>Issue</div>
               <div className="text-xs font-bold uppercase tracking-widest" style={{ color: '#c8102e' }}>Current System</div>
-              <div className="text-xs font-bold uppercase tracking-widest" style={{ color: '#06d6a0' }}>People&apos;s Party Reform</div>
+              <div className="text-xs font-bold uppercase tracking-widest" style={{ color: '#06d6a0' }}>Citizens Party Reform</div>
             </div>
             {COMPARE_ROWS.map((row, i) => (
               <div key={row.issue} className="grid grid-cols-1 md:grid-cols-3 gap-0" style={{ background: i % 2 === 0 ? '#1a2a44' : '#162236', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
@@ -465,7 +465,7 @@ export default function ImmigrationPage() {
             <p className="text-[#8fa3bc] max-w-xl mx-auto">Real answers, not talking points.</p>
           </div>
           <Accordion title="Isn't this anti-immigration? The US was built by immigrants.">
-            <p>Legal immigration built this country — and we fully support it. The People&apos;s Party proposes <em>more merit-based</em> immigration, not less compassion. We want 500,000–750,000 people per year who are vetted, skilled, English-speaking, and self-sufficient. That&apos;s not anti-immigration. That&apos;s pro-immigrant: don&apos;t bring people here to struggle.</p>
+            <p>Legal immigration built this country — and we fully support it. The Citizens Party proposes <em>more merit-based</em> immigration, not less compassion. We want 500,000–750,000 people per year who are vetted, skilled, English-speaking, and self-sufficient. That&apos;s not anti-immigration. That&apos;s pro-immigrant: don&apos;t bring people here to struggle.</p>
           </Accordion>
           <Accordion title="Why didn't the 1986 amnesty work?">
             <p>The Immigration Reform and Control Act (IRCA) of 1986 legalized ~2.7 million undocumented residents. The promise was: amnesty now, enforcement later. The enforcement never came. Within a decade, the undocumented population tripled because the economic magnet — jobs — was never removed. E-Verify didn&apos;t exist. The lesson: enforcement must come <em>before</em> any legalization, not as a promised afterthought.</p>
@@ -477,7 +477,7 @@ export default function ImmigrationPage() {
             <p>Mass deportation of 11–22 million people is logistically and economically impractical. We don&apos;t propose it. We propose: (1) removing criminal offenders first, (2) mandatory E-Verify removes the economic magnet — many will self-deport when they cannot work, (3) case-by-case review for long-term residents with clean records. Enforcement reduces the population naturally over time.</p>
           </Accordion>
           <Accordion title="What about DACA recipients?">
-            <p>DACA recipients were brought here as children through no choice of their own. The People&apos;s Party supports a <em>legislative solution</em> — not an executive order that can be reversed — providing legal status (not automatic citizenship) to DACA-eligible individuals with clean records who are in school or working. This is a one-time legislative fix, not a template for future unauthorized arrivals.</p>
+            <p>DACA recipients were brought here as children through no choice of their own. The Citizens Party supports a <em>legislative solution</em> — not an executive order that can be reversed — providing legal status (not automatic citizenship) to DACA-eligible individuals with clean records who are in school or working. This is a one-time legislative fix, not a template for future unauthorized arrivals.</p>
           </Accordion>
           <Accordion title="How does the Canada points system work?">
             <p>Canada&apos;s Express Entry awards points for: age, education level, work experience, language ability (English/French), arranged employment, and adaptability. The highest-scoring applicants receive invitations to apply for permanent residence. Australia&apos;s SkillSelect works similarly. Both admit 250,000–500,000 immigrants per year with strong economic outcomes. The US can adapt this model while keeping immediate family unity for citizens.</p>

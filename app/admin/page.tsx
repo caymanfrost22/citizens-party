@@ -31,7 +31,7 @@ export default function AdminLoginPage() {
           <div className="text-center mb-8">
             <div className="text-4xl mb-4">🏛️</div>
             <h1 className="text-2xl font-bold text-white mb-2">Admin Portal</h1>
-            <p className="text-slate-400 text-sm">The People&apos;s Party — Leadership Access</p>
+            <p className="text-slate-400 text-sm">The Citizens Party — Leadership Access</p>
           </div>
 
           {error && (
