@@ -220,7 +220,7 @@ export default function ReformPage() {
       {/* Timeline */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          {phases.map((phase, phaseIdx) => (
+          {phases.map((phase) => (
             <div key={phase.phase} className="mb-16">
               {/* Phase Header */}
               <div className="flex items-center gap-4 mb-8">
@@ -247,7 +247,7 @@ export default function ReformPage() {
                 />
 
                 <div className="space-y-6 pl-8">
-                  {phase.actions.map((action, actionIdx) => (
+                  {phase.actions.map((action) => (
                     <div
                       key={action.day}
                       className="relative rounded-2xl p-6"
