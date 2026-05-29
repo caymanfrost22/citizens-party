@@ -95,8 +95,8 @@ const THREADS = [
   },
   {
     icon: '🚫',
-    title: 'No corporate donors. No structural breakups for free relationships.',
-    description: 'Citizens Party takes no corporate money — so we don\'t reward consolidation, but we also don\'t punish it ideologically. We regulate captive markets. We leave free markets alone.',
+    title: 'Donor-disclosed politics. No structural breakups for free relationships.',
+    description: 'Citizens Party discloses every dollar above $200 within 24 hours and pre-complies with the corporate-PAC ban and donor caps we are fighting to make law for everyone. We do not reward consolidation, and we do not punish it ideologically. We regulate captive markets. We leave free markets alone.',
     appliesTo: ['Big Tech', 'Healthcare Costs'],
   },
 ] as const
@@ -108,7 +108,7 @@ export default function EconomyPillarPage() {
         badge="💰 Economics Pillar"
         badgeColor="var(--gold)"
         title={<>Build Wealth From the<br/><span style={{ color: 'var(--gold)' }}>Bottom Up.</span></>}
-        subtitle="The median American is the customer. No corporate donors. Captivity gets regulated, choice gets market. Eight sub-issues, one coherent platform."
+        subtitle="The median American is the customer. Every donor disclosed in 24 hours, every rule we are fighting to make law applied to ourselves first. Captivity gets regulated, choice gets market. Eight sub-issues, one coherent platform."
       />
 
       <SignaturePrinciple />

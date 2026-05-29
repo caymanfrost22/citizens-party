@@ -18,6 +18,15 @@ const issueRoutes: Record<string, string> = {
   'Big Tech': '/issues/big-tech',
   'Trade + Tariffs': '/issues/trade',
   'Wages + Jobs': '/issues/wages-jobs',
+  // Governance pillar
+  'Term Limits': '/issues/term-limits',
+  'Campaign Finance': '/issues/campaign-finance',
+  'Voting Reform': '/issues/voting-reform',
+  'Voting Rights': '/issues/voting-reform',
+  'Lobbying Ban': '/issues/lobbying-ban',
+  'Bureaucracy Reform': '/issues/bureaucracy-reform',
+  'Government Waste': '/issues/bureaucracy-reform',
+  'Sunset Clauses': '/issues/sunset-clauses',
 }
 
 export default async function IssuesPage() {
@@ -132,9 +141,9 @@ export default async function IssuesPage() {
         <div className="mt-10 p-5 rounded-2xl"
           style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
           <p className="text-sm" style={{ color: 'var(--muted)' }}>
-            <strong className="text-white">The Pattern:</strong> Both parties have taken corporate donor positions dressed up as ideology.
+            <strong className="text-white">The Pattern:</strong> Both parties have taken corporate-donor positions dressed up as ideology.
             Democrats protect trial lawyers and public unions. Republicans protect Wall Street and defense contractors.
-            Neither actually serves median Americans. The Citizens Party has <strong className="text-white">no corporate donors — by design.</strong>
+            Neither actually serves median Americans. The Citizens Party plays by the rules we&apos;re <strong className="text-white">fighting to change — every dollar disclosed in 24 hours, pre-complying with our own proposed reforms.</strong>
           </p>
         </div>
       </div>
