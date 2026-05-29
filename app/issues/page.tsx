@@ -7,9 +7,8 @@ export const revalidate = 60
 const issueRoutes: Record<string, string> = {
   'Taxes': '/issues/taxes',
   'Tax Reform': '/issues/taxes',
-  'Economy': '/issues/taxes',
-  'National Debt': '/issues/debt-spending',
   'Debt + Spending': '/issues/debt-spending',
+  'National Debt': '/issues/debt-spending',
   'Immigration': '/issues/immigration',
   'Border Security': '/issues/immigration',
   'Illegal Immigration': '/issues/immigration',
