@@ -3,6 +3,9 @@
 -- Run via Supabase SQL editor.
 -- Spec: docs/superpowers/specs/2026-05-28-economics-pillar-design.md
 
+-- Ensure unique constraint exists so ON CONFLICT works
+create unique index if not exists platform_positions_issue_key on platform_positions(issue);
+
 insert into platform_positions (
   issue, issue_icon, category, dem_position, rep_position, peoples_position, our_detail, priority, active
 ) values
