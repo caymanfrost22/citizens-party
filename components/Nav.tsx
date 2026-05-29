@@ -8,6 +8,7 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/platform', label: 'Platform' },
   { href: '/issues', label: 'Issues' },
+  { href: '/issues/economy', label: '💰 Economics' },
   { href: '/issues/taxes', label: 'Tax Reform' },
   { href: '/issues/immigration', label: '🛡️ Immigration' },
   { href: '/reform', label: 'Reform Plan' },
@@ -33,7 +34,7 @@ export default function Nav() {
           {links.map(l => (
             <Link key={l.href} href={l.href}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all
-                ${pathname === l.href || (l.href !== '/' && pathname?.startsWith(l.href + '/'))
+                ${pathname === l.href || (l.href !== '/' && l.href !== '/issues' && pathname?.startsWith(l.href + '/'))
                   ? 'text-[#f5a623] border border-[#f5a623]/40 bg-[#f5a623]/10'
                   : 'text-[#8fa3bc] hover:text-[#f5a623]'}`}>
               {l.label}
@@ -59,7 +60,7 @@ export default function Nav() {
             <Link key={l.href} href={l.href}
               onClick={() => setOpen(false)}
               className={`px-4 py-2 rounded-lg text-sm font-semibold
-                ${pathname === l.href || (l.href !== '/' && pathname?.startsWith(l.href + '/')) ? 'text-[#f5a623] bg-[#f5a623]/10' : 'text-[#8fa3bc]'}`}>
+                ${pathname === l.href || (l.href !== '/' && l.href !== '/issues' && pathname?.startsWith(l.href + '/')) ? 'text-[#f5a623] bg-[#f5a623]/10' : 'text-[#8fa3bc]'}`}>
               {l.label}
             </Link>
           ))}

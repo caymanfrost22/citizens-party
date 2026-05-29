@@ -1,46 +1,8 @@
 'use client'
-import { useState } from 'react'
 import Link from 'next/link'
-
-function SectionLabel({ children, color = '#00b4d8', bg = 'rgba(0,180,216,0.1)', border = 'rgba(0,180,216,0.3)' }: {
-  children: React.ReactNode; color?: string; bg?: string; border?: string
-}) {
-  return (
-    <div className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
-      style={{ background: bg, border: `1px solid ${border}`, color }}>
-      {children}
-    </div>
-  )
-}
-
-function StatCard({ num, label, color }: { num: string; label: string; color: string }) {
-  return (
-    <div className="text-center p-5 rounded-2xl" style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}>
-      <div className="text-3xl font-black mb-1" style={{ color }}>{num}</div>
-      <div className="text-xs" style={{ color: '#8fa3bc' }}>{label}</div>
-    </div>
-  )
-}
-
-function Accordion({ title, children }: { title: string; children: React.ReactNode }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="rounded-2xl overflow-hidden mb-3" style={{ border: '1px solid rgba(255,255,255,0.08)', background: '#1a2a44' }}>
-      <button
-        className="w-full flex items-center justify-between px-5 py-4 text-left font-bold text-sm hover:bg-white/5 transition-colors"
-        onClick={() => setOpen(!open)}
-      >
-        <span>{title}</span>
-        <span style={{ color: '#f5a623', fontSize: '1.2rem', lineHeight: 1 }}>{open ? '−' : '+'}</span>
-      </button>
-      {open && (
-        <div className="px-5 pb-5 text-sm" style={{ color: '#8fa3bc', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-          <div className="pt-4">{children}</div>
-        </div>
-      )}
-    </div>
-  )
-}
+import SectionLabel from '@/components/issue/SectionLabel'
+import StatCard from '@/components/issue/StatCard'
+import Accordion from '@/components/issue/Accordion'
 
 const VISA_DATA = [
   { visa: 'H-1B', purpose: 'Specialty occupations (tech, finance, engineering)', cap: '65,000 + 20,000 masters', view: 'Reform', viewColor: '#f5a623', viewBg: 'rgba(245,166,35,0.15)', note: 'Raise wage floor to market rate; strengthen American worker priority; cap body-shop firms' },

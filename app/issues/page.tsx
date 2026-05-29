@@ -8,10 +8,17 @@ const issueRoutes: Record<string, string> = {
   'Taxes': '/issues/taxes',
   'Tax Reform': '/issues/taxes',
   'Economy': '/issues/taxes',
-  'National Debt': '/issues/taxes',
+  'National Debt': '/issues/debt-spending',
+  'Debt + Spending': '/issues/debt-spending',
   'Immigration': '/issues/immigration',
   'Border Security': '/issues/immigration',
   'Illegal Immigration': '/issues/immigration',
+  'Healthcare Costs': '/issues/healthcare-costs',
+  'Housing': '/issues/housing',
+  'Inflation': '/issues/inflation',
+  'Big Tech': '/issues/big-tech',
+  'Trade + Tariffs': '/issues/trade',
+  'Wages + Jobs': '/issues/wages-jobs',
 }
 
 export default async function IssuesPage() {
