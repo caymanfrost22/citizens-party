@@ -3,6 +3,7 @@ import IssueHero from '@/components/issue/IssueHero'
 import ThreeWayCompare from '@/components/issue/ThreeWayCompare'
 import StatCard from '@/components/issue/StatCard'
 import SectionLabel from '@/components/issue/SectionLabel'
+import MechanismCard from '@/components/issue/MechanismCard'
 
 export const revalidate = 60
 
@@ -73,16 +74,7 @@ export default function WagesJobsPage() {
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
-            <div key={m.num} className="rounded-2xl p-6"
-              style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}>
-              <div className="flex gap-4 items-start">
-                <div className="text-2xl font-black shrink-0" style={{ color: '#f5a623' }}>{m.num}</div>
-                <div style={{ borderLeft: '2px solid #f5a623', paddingLeft: '1rem' }}>
-                  <h3 className="text-lg font-bold mb-2">{m.title}</h3>
-                  <p className="text-sm" style={{ color: '#8fa3bc' }}>{m.body}</p>
-                </div>
-              </div>
-            </div>
+            <MechanismCard key={m.num} num={m.num} title={m.title} body={m.body} />
           ))}
         </div>
       </section>
