@@ -55,7 +55,7 @@ export default function WagesJobsPage() {
       <section className="max-w-5xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
           <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">📊 The Labor Picture</SectionLabel>
-          <h2 className="text-3xl font-black">What's Actually Happening</h2>
+          <h2 className="text-3xl font-black">What&apos;s Actually Happening</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard num="$7.25" label="Federal Min Wage Since 2009" color="#c8102e" />
