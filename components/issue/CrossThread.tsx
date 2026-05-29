@@ -20,7 +20,7 @@ export default function CrossThread({ icon, title, description, appliesTo }: Cro
         {appliesTo.map(tag => (
           <span
             key={tag}
-            className="px-2 py-1 rounded-full text-xs"
+            className="px-2 py-1 rounded-full text-xs font-medium"
             style={{
               background: 'rgba(6,214,160,0.1)',
               border: '1px solid rgba(6,214,160,0.3)',

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import IssueHero from '@/components/issue/IssueHero'
 import SubIssueCard from '@/components/issue/SubIssueCard'
 import CrossThread from '@/components/issue/CrossThread'
@@ -185,11 +186,11 @@ function PillarCTA() {
         <p className="text-[#8fa3bc] text-lg mb-8">
           The Citizens Party Economics platform is the math, the mechanism, and the principle in one place.
         </p>
-        <a href="/join"
+        <Link href="/join"
           className="inline-block px-10 py-4 rounded-full font-black text-xl text-[#0a1628] transition-all hover:scale-105"
           style={{ background: '#f5a623' }}>
           Join the Movement 🦅
-        </a>
+        </Link>
       </div>
     </section>
   )

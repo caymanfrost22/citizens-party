@@ -77,7 +77,7 @@ export default function BigTechPage() {
               style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}>
               <div className="flex gap-4 items-start">
                 <div className="text-2xl font-black shrink-0" style={{ color: '#f5a623' }}>{m.num}</div>
-                <div>
+                <div style={{ borderLeft: '2px solid #f5a623', paddingLeft: '1rem' }}>
                   <h3 className="text-lg font-bold mb-2">{m.title}</h3>
                   <p className="text-sm" style={{ color: '#8fa3bc' }}>{m.body}</p>
                 </div>
@@ -98,10 +98,12 @@ export default function BigTechPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 text-center" style={{ background: '#0d1f38' }}>
-        <p className="text-xs" style={{ color: '#8fa3bc' }}>
-          Sources: S&P 500 market cap data (Slickcharts), Apple + Google developer agreements, StatCounter Global Stats, GroupM Digital Ad Spend Forecast, DOJ v. Google (Case 1:20-cv-03010), EU Digital Markets Act.
-        </p>
+      <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div className="py-8">
+          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+            Sources: S&P 500 market cap data (Slickcharts), Apple + Google developer agreements, StatCounter Global Stats, GroupM Digital Ad Spend Forecast, DOJ v. Google (Case 1:20-cv-03010), EU Digital Markets Act.
+          </p>
+        </div>
       </section>
     </div>
   )

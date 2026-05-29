@@ -11,7 +11,7 @@ export default function SubIssueCard({ icon, title, oneLiner, href }: SubIssueCa
   return (
     <Link
       href={href}
-      className="block rounded-2xl p-6 transition-all hover:-translate-y-1"
+      className="block rounded-2xl p-6 transition-all hover:-translate-y-1 hover:border-[#f5a623]/30"
       style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}
     >
       <div className="flex items-center gap-3 mb-3">

@@ -77,7 +77,7 @@ export default function WagesJobsPage() {
               style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}>
               <div className="flex gap-4 items-start">
                 <div className="text-2xl font-black shrink-0" style={{ color: '#f5a623' }}>{m.num}</div>
-                <div>
+                <div style={{ borderLeft: '2px solid #f5a623', paddingLeft: '1rem' }}>
                   <h3 className="text-lg font-bold mb-2">{m.title}</h3>
                   <p className="text-sm" style={{ color: '#8fa3bc' }}>{m.body}</p>
                 </div>
@@ -99,10 +99,12 @@ export default function WagesJobsPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 text-center" style={{ background: '#0d1f38' }}>
-        <p className="text-xs" style={{ color: '#8fa3bc' }}>
-          Sources: BLS Wage Statistics, BLS Union Membership Annual Report, Upwork Freelance Forward Survey, BLS Manufacturing Employment, FTC Non-Compete Rule (2024) and pending litigation, US DOL Apprenticeship data.
-        </p>
+      <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div className="py-8">
+          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+            Sources: BLS Wage Statistics, BLS Union Membership Annual Report, Upwork Freelance Forward Survey, BLS Manufacturing Employment, FTC Non-Compete Rule (2024) and pending litigation, US DOL Apprenticeship data.
+          </p>
+        </div>
       </section>
     </div>
   )
