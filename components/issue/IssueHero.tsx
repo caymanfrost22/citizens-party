@@ -7,11 +7,11 @@ interface IssueHeroProps {
   subtitle: string
 }
 
-export default function IssueHero({ badge, badgeColor = '#f5a623', title, subtitle }: IssueHeroProps) {
+export default function IssueHero({ badge, badgeColor = 'var(--gold)', title, subtitle }: IssueHeroProps) {
   return (
     <div
       className="py-16 px-4 text-center"
-      style={{ background: 'linear-gradient(135deg, #0a1628, #1a2a44)' }}
+      style={{ background: 'linear-gradient(135deg, var(--navy), var(--card))' }}
     >
       <div
         className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
@@ -24,7 +24,7 @@ export default function IssueHero({ badge, badgeColor = '#f5a623', title, subtit
         {badge}
       </div>
       <h1 className="text-5xl font-black mb-3">{title}</h1>
-      <p className="text-[#8fa3bc] text-lg max-w-2xl mx-auto">{subtitle}</p>
+      <p className="text-[var(--muted)] text-lg max-w-2xl mx-auto">{subtitle}</p>
     </div>
   )
 }

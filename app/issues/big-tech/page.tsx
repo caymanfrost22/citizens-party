@@ -41,7 +41,7 @@ export default function BigTechPage() {
       <IssueHero
         badge="📱 Big Tech + Antitrust"
         badgeColor="#7b2d8b"
-        title={<><span style={{ color: '#f5a623' }}>Captivity</span> = Regulation.<br/><span style={{ color: '#06d6a0' }}>Choice</span> = Market.</>}
+        title={<><span style={{ color: 'var(--gold)' }}>Captivity</span> = Regulation.<br/><span style={{ color: 'var(--green)' }}>Choice</span> = Market.</>}
         subtitle="Top 5 tech firms = 25% of the S&P 500. Apple + Google take 15–30% on every app sale. Meta + Google own 50% of digital ads. We don't break free relationships. We break captive markets."
       />
 
@@ -59,7 +59,7 @@ export default function BigTechPage() {
           <h2 className="text-3xl font-black">The Concentration Stack</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard num="25%" label="Top 5 Tech = % of S&P 500" color="#f5a623" />
+          <StatCard num="25%" label="Top 5 Tech = % of S&P 500" color="var(--gold)" />
           <StatCard num="15–30%" label="App Store Cut on Every Sale" color="#c8102e" />
           <StatCard num="90%" label="Google Share of US Search" color="#c8102e" />
           <StatCard num="50%" label="Meta + Google Share of Digital Ads" color="#c8102e" />
@@ -68,9 +68,9 @@ export default function BigTechPage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">🛠️ Our Plan</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
           <h2 className="text-3xl font-black">Free Markets For Free People</h2>
-          <p className="text-[#8fa3bc] mt-2">Regulate the captive. Leave the free alone.</p>
+          <p className="text-[var(--muted)] mt-2">Regulate the captive. Leave the free alone.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
@@ -81,9 +81,9 @@ export default function BigTechPage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl p-6"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <h3 className="font-bold mb-3" style={{ color: '#f5a623' }}>How This Connects</h3>
-          <ul className="space-y-2 text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <h3 className="font-bold mb-3" style={{ color: 'var(--gold)' }}>How This Connects</h3>
+          <ul className="space-y-2 text-sm" style={{ color: 'var(--muted)' }}>
             <li>• <Link href="/issues/healthcare-costs" className="underline hover:text-white">Healthcare Costs</Link>: PBM divestiture is the same principle — the consumer is captive there, so the market is regulated. Here you can walk away, so the market is free.</li>
             <li>• See the <Link href="/issues/economy" className="underline hover:text-white">Economics Pillar</Link> for the full Captivity = Regulation, Choice = Market signature principle.</li>
           </ul>
@@ -92,7 +92,7 @@ export default function BigTechPage() {
 
       <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="py-8">
-          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+          <p className="text-xs" style={{ color: 'var(--muted)' }}>
             Sources: S&P 500 market cap data (Slickcharts), Apple + Google developer agreements, StatCounter Global Stats, GroupM Digital Ad Spend Forecast, DOJ v. Google (Case 1:20-cv-03010), EU Digital Markets Act.
           </p>
         </div>

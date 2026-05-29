@@ -50,8 +50,8 @@ export default function TradePage() {
     <div>
       <IssueHero
         badge="🚢 Trade + Tariffs"
-        badgeColor="#00b4d8"
-        title={<>Trade Should Be <span style={{ color: '#f5a623' }}>Fair</span>, Not Free or Closed.</>}
+        badgeColor="var(--teal)"
+        title={<>Trade Should Be <span style={{ color: 'var(--gold)' }}>Fair</span>, Not Free or Closed.</>}
         subtitle="$900B annual trade deficit. Manufacturing at 10% of GDP, down from 28% peak. 90% of semis come from Asia. Tariffs are revenue and leverage, not a baseline tax on consumers. Friend countries get free trade; adversaries don't."
       />
 
@@ -65,22 +65,22 @@ export default function TradePage() {
 
       <section className="max-w-5xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#00b4d8" bg="rgba(0,180,216,0.1)" border="rgba(0,180,216,0.3)">📊 The Imbalance</SectionLabel>
+          <SectionLabel color="var(--teal)" bg="color-mix(in srgb, var(--teal) 10%, transparent)" border="color-mix(in srgb, var(--teal) 30%, transparent)">📊 The Imbalance</SectionLabel>
           <h2 className="text-3xl font-black">Strategic Vulnerabilities</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard num="$900B" label="Annual US Trade Deficit" color="#c8102e" />
           <StatCard num="10%" label="Manufacturing % of GDP (Peak: 28%)" color="#c8102e" />
-          <StatCard num="90%" label="Semis Sourced from Asia" color="#f5a623" />
-          <StatCard num="180 days" label="Strategic Stockpile Target" color="#06d6a0" />
+          <StatCard num="90%" label="Semis Sourced from Asia" color="var(--gold)" />
+          <StatCard num="180 days" label="Strategic Stockpile Target" color="var(--green)" />
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">🛠️ Our Plan</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
           <h2 className="text-3xl font-black">Seven Mechanisms</h2>
-          <p className="text-[#8fa3bc] mt-2">Fair trade with friends. Strategic discipline at home. No isolationism, no naïveté.</p>
+          <p className="text-[var(--muted)] mt-2">Fair trade with friends. Strategic discipline at home. No isolationism, no naïveté.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
@@ -91,9 +91,9 @@ export default function TradePage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl p-6"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <h3 className="font-bold mb-3" style={{ color: '#f5a623' }}>How This Connects</h3>
-          <ul className="space-y-2 text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <h3 className="font-bold mb-3" style={{ color: 'var(--gold)' }}>How This Connects</h3>
+          <ul className="space-y-2 text-sm" style={{ color: 'var(--muted)' }}>
             <li>• <Link href="/issues/debt-spending" className="underline hover:text-white">Debt + Spending</Link>: Buy American 100% on strategic goods + reshored defense manufacturing is the supply-side companion to Pentagon audit accountability.</li>
             <li>• <Link href="/issues/inflation" className="underline hover:text-white">Inflation</Link>: the 12-month permitting cap applies twice — energy projects there, reshored strategic manufacturing here. Same rule, same effect: build things in America fast.</li>
             <li>• <Link href="/issues/taxes" className="underline hover:text-white">Tax Reform</Link>: tariff revenue is a complement to the consumption tax, not a substitute. The reshoring credit hard-sunsets at 10 years so it never becomes permanent rent.</li>
@@ -103,7 +103,7 @@ export default function TradePage() {
 
       <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="py-8">
-          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+          <p className="text-xs" style={{ color: 'var(--muted)' }}>
             Sources: US Census Foreign Trade Statistics, BEA Industry Economic Accounts, Semiconductor Industry Association, USTR Tariff Schedule, CHIPS Act implementation reports, USMCA Article 4 (rules of origin).
           </p>
         </div>

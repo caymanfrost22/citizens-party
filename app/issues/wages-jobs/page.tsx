@@ -40,8 +40,8 @@ export default function WagesJobsPage() {
     <div>
       <IssueHero
         badge="👷 Wages + Jobs + Labor"
-        badgeColor="#06d6a0"
-        title={<>Federal Min Wage Frozen <span style={{ color: '#f5a623' }}>16 Years</span>.</>}
+        badgeColor="var(--green)"
+        title={<>Federal Min Wage Frozen <span style={{ color: 'var(--gold)' }}>16 Years</span>.</>}
         subtitle="Real wages stagnant 50 years for non-college workers. Manufacturing jobs at 12.9M vs 19M peak. 36% of workers do gig work in some form. AI displacement looming. Tiered min wage + Independent Worker class + portable benefits + Universal Worker Account."
       />
 
@@ -55,22 +55,22 @@ export default function WagesJobsPage() {
 
       <section className="max-w-5xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">📊 The Labor Picture</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">📊 The Labor Picture</SectionLabel>
           <h2 className="text-3xl font-black">What&apos;s Actually Happening</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard num="$7.25" label="Federal Min Wage Since 2009" color="#c8102e" />
-          <StatCard num="10%" label="Union Membership (1950s: 35%)" color="#f5a623" />
-          <StatCard num="36%" label="Workers Doing Gig Work" color="#f5a623" />
+          <StatCard num="10%" label="Union Membership (1950s: 35%)" color="var(--gold)" />
+          <StatCard num="36%" label="Workers Doing Gig Work" color="var(--gold)" />
           <StatCard num="12.9M" label="US Mfg Jobs (Peak: 19M)" color="#c8102e" />
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">🛠️ Our Plan</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
           <h2 className="text-3xl font-black">Five Mechanisms</h2>
-          <p className="text-[#8fa3bc] mt-2">Tiered floor. Portable benefits. Mobility. Real training paths.</p>
+          <p className="text-[var(--muted)] mt-2">Tiered floor. Portable benefits. Mobility. Real training paths.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
@@ -81,9 +81,9 @@ export default function WagesJobsPage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl p-6"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <h3 className="font-bold mb-3" style={{ color: '#f5a623' }}>How This Connects</h3>
-          <ul className="space-y-2 text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <h3 className="font-bold mb-3" style={{ color: 'var(--gold)' }}>How This Connects</h3>
+          <ul className="space-y-2 text-sm" style={{ color: 'var(--muted)' }}>
             <li>• <Link href="/issues/healthcare-costs" className="underline hover:text-white">Healthcare Costs</Link>: Universal Worker Account is the same architecture as the Universal HSA from birth. One savings model, four life needs.</li>
             <li>• <Link href="/issues/housing" className="underline hover:text-white">Housing</Link>: the Housing Savings Account is another instance of the same pattern — tax-advantaged, federally seeded for low/middle income, portable.</li>
             <li>• <Link href="/issues/debt-spending" className="underline hover:text-white">Debt + Spending</Link>: sovereign-wealth-fund-backed Social Security is the retirement leg of the same architecture. Americans own their financial future end to end.</li>
@@ -93,7 +93,7 @@ export default function WagesJobsPage() {
 
       <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="py-8">
-          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+          <p className="text-xs" style={{ color: 'var(--muted)' }}>
             Sources: BLS Wage Statistics, BLS Union Membership Annual Report, Upwork Freelance Forward Survey, BLS Manufacturing Employment, FTC Non-Compete Rule (2024) and pending litigation, US DOL Apprenticeship data.
           </p>
         </div>

@@ -9,9 +9,9 @@ type Tab = 'positions' | 'subscribers'
 
 const CATEGORIES = ['economic', 'governance', 'social', 'foreign', 'environment'] as const
 const CATEGORY_COLORS: Record<string, string> = {
-  economic: '#f5a623',
-  governance: '#00b4d8',
-  social: '#06d6a0',
+  economic: 'var(--gold)',
+  governance: 'var(--teal)',
+  social: 'var(--green)',
   foreign: '#8b5cf6',
   environment: '#22c55e',
 }
@@ -49,7 +49,7 @@ function EditPositionModal({
 
   const field = (label: string, key: keyof PlatformPosition, type: 'text' | 'textarea' | 'number' = 'text') => (
     <div>
-      <label className="block text-xs font-semibold mb-1" style={{ color: '#8fa3bc' }}>{label}</label>
+      <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--muted)' }}>{label}</label>
       {type === 'textarea' ? (
         <textarea
           rows={3}
@@ -88,7 +88,7 @@ function EditPositionModal({
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-xs font-semibold mb-1" style={{ color: '#8fa3bc' }}>Category</label>
+            <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--muted)' }}>Category</label>
             <select
               value={form.category || 'economic'}
               onChange={(e) => setForm({ ...form, category: e.target.value as PlatformPosition['category'] })}
@@ -111,11 +111,11 @@ function EditPositionModal({
         </div>
 
         <div className="flex items-center gap-3 mb-6">
-          <label className="text-sm font-semibold" style={{ color: '#8fa3bc' }}>Active</label>
+          <label className="text-sm font-semibold" style={{ color: 'var(--muted)' }}>Active</label>
           <button
             onClick={() => setForm({ ...form, active: !form.active })}
             className="w-12 h-6 rounded-full transition-all relative"
-            style={{ background: form.active ? '#06d6a0' : 'rgba(255,255,255,0.1)' }}
+            style={{ background: form.active ? 'var(--green)' : 'rgba(255,255,255,0.1)' }}
           >
             <div
               className="absolute top-1 w-4 h-4 rounded-full transition-all"
@@ -129,14 +129,14 @@ function EditPositionModal({
             onClick={handleSave}
             disabled={saving}
             className="flex-1 py-3 rounded-xl font-bold transition-all"
-            style={{ background: saving ? 'rgba(6,214,160,0.5)' : '#06d6a0', color: '#0a1628' }}
+            style={{ background: saving ? 'color-mix(in srgb, var(--green) 50%, transparent)' : 'var(--green)', color: 'var(--navy)' }}
           >
             {saving ? 'Saving...' : isNew ? 'Create Position' : 'Save Changes'}
           </button>
           <button
             onClick={onClose}
             className="px-6 py-3 rounded-xl font-bold transition-all"
-            style={{ background: 'rgba(255,255,255,0.07)', color: '#8fa3bc' }}
+            style={{ background: 'rgba(255,255,255,0.07)', color: 'var(--muted)' }}
           >
             Cancel
           </button>
@@ -155,7 +155,6 @@ export default function AdminDashboard() {
   const [editTarget, setEditTarget] = useState<PlatformPosition | null | 'new'>()
   const [searchSub, setSearchSub] = useState('')
   const [filterCat, setFilterCat] = useState<string>('all')
-  const [thisMonthCount, setThisMonthCount] = useState(0)
 
   const loadPositions = useCallback(async () => {
     const res = await fetch('/api/admin/positions')
@@ -169,10 +168,7 @@ export default function AdminDashboard() {
       .from('subscribers')
       .select('*')
       .order('created_at', { ascending: false })
-    const rows = data || []
-    setSubscribers(rows)
-    const cutoff = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
-    setThisMonthCount(rows.filter((s) => new Date(s.created_at) > cutoff).length)
+    setSubscribers(data || [])
   }, [])
 
   useEffect(() => {
@@ -236,14 +232,14 @@ export default function AdminDashboard() {
 
   if (loading) {
     return (
-      <main className="min-h-screen flex items-center justify-center" style={{ background: '#0a1628' }}>
+      <main className="min-h-screen flex items-center justify-center" style={{ background: 'var(--navy)' }}>
         <div className="text-white text-xl">Loading dashboard...</div>
       </main>
     )
   }
 
   return (
-    <main className="min-h-screen" style={{ background: '#0a1628' }}>
+    <main className="min-h-screen" style={{ background: 'var(--navy)' }}>
       {/* Header */}
       <div
         className="sticky top-0 z-40 flex items-center justify-between px-6 py-4"
@@ -253,7 +249,7 @@ export default function AdminDashboard() {
           <span className="text-2xl">🛡️</span>
           <div>
             <div className="font-black text-white">Admin Dashboard</div>
-            <div className="text-xs" style={{ color: '#8fa3bc' }}>The Citizens Party</div>
+            <div className="text-xs" style={{ color: 'var(--muted)' }}>The Citizens Party</div>
           </div>
         </div>
 
@@ -265,8 +261,8 @@ export default function AdminDashboard() {
                 onClick={() => setTab(t)}
                 className="px-4 py-2 rounded-lg text-sm font-semibold capitalize transition-all"
                 style={{
-                  background: tab === t ? '#f5a623' : 'transparent',
-                  color: tab === t ? '#0a1628' : '#8fa3bc',
+                  background: tab === t ? 'var(--gold)' : 'transparent',
+                  color: tab === t ? 'var(--navy)' : 'var(--muted)',
                 }}
               >
                 {t}{' '}
@@ -307,7 +303,7 @@ export default function AdminDashboard() {
                 <button
                   onClick={() => setEditTarget('new')}
                   className="px-4 py-2 rounded-lg text-sm font-bold"
-                  style={{ background: '#06d6a0', color: '#0a1628' }}
+                  style={{ background: 'var(--green)', color: 'var(--navy)' }}
                 >
                   + New Position
                 </button>
@@ -338,9 +334,9 @@ export default function AdminDashboard() {
                       >
                         {p.category}
                       </span>
-                      <span className="text-xs" style={{ color: '#8fa3bc' }}>Priority: {p.priority}</span>
+                      <span className="text-xs" style={{ color: 'var(--muted)' }}>Priority: {p.priority}</span>
                     </div>
-                    <p className="text-sm truncate" style={{ color: '#8fa3bc' }}>
+                    <p className="text-sm truncate" style={{ color: 'var(--muted)' }}>
                       🟢 {p.peoples_position}
                     </p>
                   </div>
@@ -349,9 +345,9 @@ export default function AdminDashboard() {
                       onClick={() => toggleActive(p)}
                       className="text-xs px-3 py-1 rounded-lg transition-all"
                       style={{
-                        background: p.active ? 'rgba(6,214,160,0.15)' : 'rgba(255,255,255,0.05)',
-                        color: p.active ? '#06d6a0' : '#8fa3bc',
-                        border: `1px solid ${p.active ? 'rgba(6,214,160,0.3)' : 'rgba(255,255,255,0.1)'}`,
+                        background: p.active ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'rgba(255,255,255,0.05)',
+                        color: p.active ? 'var(--green)' : 'var(--muted)',
+                        border: `1px solid ${p.active ? 'color-mix(in srgb, var(--green) 30%, transparent)' : 'rgba(255,255,255,0.1)'}`,
                       }}
                     >
                       {p.active ? 'Live' : 'Hidden'}
@@ -359,7 +355,7 @@ export default function AdminDashboard() {
                     <button
                       onClick={() => setEditTarget(p)}
                       className="text-xs px-3 py-1 rounded-lg"
-                      style={{ background: 'rgba(245,166,35,0.15)', color: '#f5a623', border: '1px solid rgba(245,166,35,0.3)' }}
+                      style={{ background: 'color-mix(in srgb, var(--gold) 15%, transparent)', color: 'var(--gold)', border: '1px solid color-mix(in srgb, var(--gold) 30%, transparent)' }}
                     >
                       Edit
                     </button>
@@ -383,7 +379,7 @@ export default function AdminDashboard() {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-black text-white">
                 Subscribers{' '}
-                <span style={{ color: '#06d6a0' }}>({subscribers.length})</span>
+                <span style={{ color: 'var(--green)' }}>({subscribers.length})</span>
               </h2>
               <div className="flex gap-3">
                 <input
@@ -410,7 +406,7 @@ export default function AdminDashboard() {
                     a.click()
                   }}
                   className="px-4 py-2 rounded-lg text-sm font-bold"
-                  style={{ background: '#00b4d8', color: '#0a1628' }}
+                  style={{ background: 'var(--teal)', color: 'var(--navy)' }}
                 >
                   Export CSV
                 </button>
@@ -420,16 +416,18 @@ export default function AdminDashboard() {
             {/* Stats strip */}
             <div className="grid grid-cols-3 gap-4 mb-6">
               {[
-                { label: 'Total Supporters', value: subscribers.length, color: '#06d6a0' },
+                { label: 'Total Supporters', value: subscribers.length, color: 'var(--green)' },
                 {
                   label: 'This Month',
-                  value: thisMonthCount,
-                  color: '#f5a623',
+                  value: subscribers.filter(
+                    (s) => new Date(s.created_at) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+                  ).length,
+                  color: 'var(--gold)',
                 },
                 {
                   label: 'With Message',
                   value: subscribers.filter((s) => s.message).length,
-                  color: '#00b4d8',
+                  color: 'var(--teal)',
                 },
               ].map((stat) => (
                 <div
@@ -438,7 +436,7 @@ export default function AdminDashboard() {
                   style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
                 >
                   <div className="text-3xl font-black" style={{ color: stat.color }}>{stat.value}</div>
-                  <div className="text-sm mt-1" style={{ color: '#8fa3bc' }}>{stat.label}</div>
+                  <div className="text-sm mt-1" style={{ color: 'var(--muted)' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -452,31 +450,31 @@ export default function AdminDashboard() {
                 >
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0"
-                    style={{ background: 'rgba(6,214,160,0.15)', color: '#06d6a0' }}
+                    style={{ background: 'color-mix(in srgb, var(--green) 15%, transparent)', color: 'var(--green)' }}
                   >
                     {(s.name || s.email)[0].toUpperCase()}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-semibold text-white">{s.name || 'Anonymous'}</span>
-                      <span style={{ color: '#8fa3bc' }} className="text-sm">{s.email}</span>
+                      <span style={{ color: 'var(--muted)' }} className="text-sm">{s.email}</span>
                       {s.zip_code && (
-                        <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'rgba(0,180,216,0.1)', color: '#00b4d8' }}>
+                        <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'color-mix(in srgb, var(--teal) 10%, transparent)', color: 'var(--teal)' }}>
                           📍 {s.zip_code}
                         </span>
                       )}
                     </div>
                     {s.message && (
-                      <p className="text-sm mt-1 italic" style={{ color: '#8fa3bc' }}>&quot;{s.message}&quot;</p>
+                      <p className="text-sm mt-1 italic" style={{ color: 'var(--muted)' }}>"{s.message}"</p>
                     )}
                   </div>
-                  <div className="text-xs flex-shrink-0" style={{ color: '#8fa3bc' }}>
+                  <div className="text-xs flex-shrink-0" style={{ color: 'var(--muted)' }}>
                     {new Date(s.created_at).toLocaleDateString()}
                   </div>
                 </div>
               ))}
               {filteredSubscribers.length === 0 && (
-                <div className="text-center py-16" style={{ color: '#8fa3bc' }}>
+                <div className="text-center py-16" style={{ color: 'var(--muted)' }}>
                   {searchSub ? 'No results for your search.' : 'No subscribers yet — share the site!'}
                 </div>
               )}

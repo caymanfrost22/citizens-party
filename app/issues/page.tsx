@@ -32,13 +32,13 @@ export default async function IssuesPage() {
     <div>
       {/* Header */}
       <div className="py-16 px-4 text-center"
-        style={{ background: 'linear-gradient(135deg, #0a1628, #1a2a44)' }}>
+        style={{ background: 'linear-gradient(135deg, var(--navy), var(--card))' }}>
         <div className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
-          style={{ background: 'rgba(0,180,216,0.1)', border: '1px solid rgba(0,180,216,0.3)', color: '#00b4d8' }}>
+          style={{ background: 'color-mix(in srgb, var(--teal) 10%, transparent)', border: '1px solid color-mix(in srgb, var(--teal) 30%, transparent)', color: 'var(--teal)' }}>
           ⚡ Side By Side
         </div>
         <h1 className="text-5xl font-black mb-3">Issues Breakdown</h1>
-        <p className="text-[#8fa3bc] text-lg max-w-xl mx-auto">
+        <p className="text-[var(--muted)] text-lg max-w-xl mx-auto">
           See exactly where both parties agree (and fail), and how we&apos;d do it differently.
           Click any issue to see our full reform plan.
         </p>
@@ -56,7 +56,7 @@ export default async function IssuesPage() {
             🔴 Republicans
           </div>
           <div className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
-            style={{ background: 'rgba(6,214,160,0.1)', border: '1px solid rgba(6,214,160,0.3)', color: '#06d6a0' }}>
+            style={{ background: 'color-mix(in srgb, var(--green) 10%, transparent)', border: '1px solid color-mix(in srgb, var(--green) 30%, transparent)', color: 'var(--green)' }}>
             🟢 Citizens Party
           </div>
         </div>
@@ -67,18 +67,18 @@ export default async function IssuesPage() {
             const route = issueRoutes[pos.issue]
             const card = (
               <div className="rounded-2xl overflow-hidden"
-                style={{ background: '#1a2a44', border: `1px solid ${route ? 'rgba(245,166,35,0.3)' : 'rgba(255,255,255,0.07)'}` }}>
+                style={{ background: 'var(--card)', border: `1px solid ${route ? 'color-mix(in srgb, var(--gold) 30%, transparent)' : 'rgba(255,255,255,0.07)'}` }}>
                 <div className="px-4 pt-4 pb-2 flex items-center gap-2">
                   <span className="text-2xl">{pos.issue_icon}</span>
-                  <h3 className="font-bold" style={{ color: '#f5a623' }}>{pos.issue}</h3>
-                  {route && <span className="ml-auto text-xs" style={{ color: '#f5a623' }}>See plan →</span>}
+                  <h3 className="font-bold" style={{ color: 'var(--gold)' }}>{pos.issue}</h3>
+                  {route && <span className="ml-auto text-xs" style={{ color: 'var(--gold)' }}>See plan →</span>}
                 </div>
                 <div className="px-4 pb-4 space-y-3 text-sm">
                   <div><span className="font-bold" style={{ color: '#3b82f6' }}>🔵 </span><span style={{ color: '#93c5fd' }}>{pos.dem_position}</span></div>
                   <div><span className="font-bold" style={{ color: '#ef4444' }}>🔴 </span><span style={{ color: '#fca5a5' }}>{pos.rep_position}</span></div>
-                  <div className="p-3 rounded-xl" style={{ background: 'rgba(6,214,160,0.08)' }}>
-                    <span className="font-bold" style={{ color: '#06d6a0' }}>🟢 </span>
-                    <span className="font-semibold" style={{ color: '#06d6a0' }}>{pos.peoples_position}</span>
+                  <div className="p-3 rounded-xl" style={{ background: 'color-mix(in srgb, var(--green) 8%, transparent)' }}>
+                    <span className="font-bold" style={{ color: 'var(--green)' }}>🟢 </span>
+                    <span className="font-semibold" style={{ color: 'var(--green)' }}>{pos.peoples_position}</span>
                   </div>
                 </div>
               </div>
@@ -95,10 +95,10 @@ export default async function IssuesPage() {
           <table className="w-full border-collapse">
             <thead>
               <tr style={{ background: '#0d1f38' }}>
-                <th className="text-left p-4 text-sm font-bold w-32" style={{ color: '#f5a623' }}>Issue</th>
+                <th className="text-left p-4 text-sm font-bold w-32" style={{ color: 'var(--gold)' }}>Issue</th>
                 <th className="p-4 text-sm font-bold" style={{ color: '#3b82f6' }}>🔵 Democrats</th>
                 <th className="p-4 text-sm font-bold" style={{ color: '#ef4444' }}>🔴 Republicans</th>
-                <th className="p-4 text-sm font-bold" style={{ color: '#06d6a0' }}>🟢 Citizens Party</th>
+                <th className="p-4 text-sm font-bold" style={{ color: 'var(--green)' }}>🟢 Citizens Party</th>
               </tr>
             </thead>
             <tbody>
@@ -106,12 +106,12 @@ export default async function IssuesPage() {
                 const route = issueRoutes[pos.issue]
                 return (
                   <tr key={pos.id}
-                    style={{ background: i % 2 === 0 ? '#1a2a44' : '#162236', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+                    style={{ background: i % 2 === 0 ? 'var(--card)' : '#162236', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                     <td className="p-4">
                       <div className="flex items-center gap-2">
                         <span className="text-xl">{pos.issue_icon}</span>
                         {route ? (
-                          <Link href={route} className="font-bold text-sm hover:underline" style={{ color: '#f5a623' }}>
+                          <Link href={route} className="font-bold text-sm hover:underline" style={{ color: 'var(--gold)' }}>
                             {pos.issue} →
                           </Link>
                         ) : (
@@ -121,7 +121,7 @@ export default async function IssuesPage() {
                     </td>
                     <td className="p-4 text-sm text-center align-top" style={{ color: '#93c5fd' }}>{pos.dem_position}</td>
                     <td className="p-4 text-sm text-center align-top" style={{ color: '#fca5a5' }}>{pos.rep_position}</td>
-                    <td className="p-4 text-sm text-center align-top font-semibold" style={{ color: '#06d6a0' }}>{pos.peoples_position}</td>
+                    <td className="p-4 text-sm text-center align-top font-semibold" style={{ color: 'var(--green)' }}>{pos.peoples_position}</td>
                   </tr>
                 )
               })}
@@ -131,8 +131,8 @@ export default async function IssuesPage() {
 
         {/* Bottom callout */}
         <div className="mt-10 p-5 rounded-2xl"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <p className="text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <p className="text-sm" style={{ color: 'var(--muted)' }}>
             <strong className="text-white">The Pattern:</strong> Both parties have taken corporate donor positions dressed up as ideology.
             Democrats protect trial lawyers and public unions. Republicans protect Wall Street and defense contractors.
             Neither actually serves median Americans. The Citizens Party has <strong className="text-white">no corporate donors — by design.</strong>

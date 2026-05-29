@@ -9,22 +9,22 @@ export default function CrossThread({ icon, title, description, appliesTo }: Cro
   return (
     <div
       className="rounded-2xl p-6"
-      style={{ background: '#1a2a44', border: '1px solid rgba(255,255,255,0.07)' }}
+      style={{ background: 'var(--card)', border: '1px solid rgba(255,255,255,0.07)' }}
     >
       <div className="flex items-center gap-3 mb-3">
         <span className="text-2xl">{icon}</span>
-        <h3 className="font-bold" style={{ color: '#f5a623' }}>{title}</h3>
+        <h3 className="font-bold" style={{ color: 'var(--gold)' }}>{title}</h3>
       </div>
-      <p className="text-sm mb-3" style={{ color: '#8fa3bc' }}>{description}</p>
+      <p className="text-sm mb-3" style={{ color: 'var(--muted)' }}>{description}</p>
       <div className="flex flex-wrap gap-2">
         {appliesTo.map(tag => (
           <span
             key={tag}
             className="px-2 py-1 rounded-full text-xs font-medium"
             style={{
-              background: 'rgba(6,214,160,0.1)',
-              border: '1px solid rgba(6,214,160,0.3)',
-              color: '#06d6a0',
+              background: 'color-mix(in srgb, var(--green) 10%, transparent)',
+              border: '1px solid color-mix(in srgb, var(--green) 30%, transparent)',
+              color: 'var(--green)',
             }}
           >
             {tag}
