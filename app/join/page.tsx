@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 const reasons = [
   { icon: '🏠', text: 'Housing I can actually afford' },
@@ -30,8 +31,8 @@ export default function JoinPage() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Something went wrong')
       setStatus('success')
-    } catch (err: any) {
-      setErrorMsg(err.message)
+    } catch (err: unknown) {
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong')
       setStatus('error')
     }
   }
@@ -41,7 +42,7 @@ export default function JoinPage() {
       <main className="min-h-screen flex items-center justify-center px-4" style={{ background: '#0a1628' }}>
         <div className="max-w-lg w-full text-center">
           <div className="text-7xl mb-6">🎉</div>
-          <h1 className="text-4xl font-black text-white mb-4">You're In!</h1>
+          <h1 className="text-4xl font-black text-white mb-4">You&apos;re In!</h1>
           <p className="text-xl mb-6" style={{ color: '#8fa3bc' }}>
             Welcome to The Citizens Party, {form.name || 'patriot'}. You just joined a movement that puts people over politics.
           </p>
@@ -51,19 +52,19 @@ export default function JoinPage() {
           >
             <h3 className="font-bold text-white mb-3">What happens next:</h3>
             <ul className="space-y-2" style={{ color: '#8fa3bc' }}>
-              <li>✅ You'll receive a confirmation email</li>
-              <li>📣 We'll keep you updated on our launch campaign</li>
-              <li>🗳️ You'll be first to know when we file for ballot access</li>
+              <li>✅ You&apos;ll receive a confirmation email</li>
+              <li>📣 We&apos;ll keep you updated on our launch campaign</li>
+              <li>🗳️ You&apos;ll be first to know when we file for ballot access</li>
               <li>📢 Share this with people who feel left behind by both parties</li>
             </ul>
           </div>
-          <a
+          <Link
             href="/"
             className="inline-block px-8 py-3 rounded-full font-bold"
             style={{ background: '#f5a623', color: '#0a1628' }}
           >
             Back to Home
-          </a>
+          </Link>
         </div>
       </main>
     )
@@ -88,7 +89,7 @@ export default function JoinPage() {
             <span style={{ color: '#f5a623' }}>change to happen?</span>
           </h1>
           <p className="text-xl" style={{ color: '#8fa3bc' }}>
-            The Citizens Party isn't backed by billionaires or corporations. It's backed by people like you — who
+            The Citizens Party isn&apos;t backed by billionaires or corporations. It&apos;s backed by people like you — who
             believe America deserves better than choosing between two broken options.
           </p>
         </div>

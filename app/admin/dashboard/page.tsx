@@ -155,6 +155,7 @@ export default function AdminDashboard() {
   const [editTarget, setEditTarget] = useState<PlatformPosition | null | 'new'>()
   const [searchSub, setSearchSub] = useState('')
   const [filterCat, setFilterCat] = useState<string>('all')
+  const [thisMonthCount, setThisMonthCount] = useState(0)
 
   const loadPositions = useCallback(async () => {
     const res = await fetch('/api/admin/positions')
@@ -168,7 +169,10 @@ export default function AdminDashboard() {
       .from('subscribers')
       .select('*')
       .order('created_at', { ascending: false })
-    setSubscribers(data || [])
+    const rows = data || []
+    setSubscribers(rows)
+    const cutoff = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+    setThisMonthCount(rows.filter((s) => new Date(s.created_at) > cutoff).length)
   }, [])
 
   useEffect(() => {
@@ -419,9 +423,7 @@ export default function AdminDashboard() {
                 { label: 'Total Supporters', value: subscribers.length, color: '#06d6a0' },
                 {
                   label: 'This Month',
-                  value: subscribers.filter(
-                    (s) => new Date(s.created_at) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
-                  ).length,
+                  value: thisMonthCount,
                   color: '#f5a623',
                 },
                 {
@@ -465,7 +467,7 @@ export default function AdminDashboard() {
                       )}
                     </div>
                     {s.message && (
-                      <p className="text-sm mt-1 italic" style={{ color: '#8fa3bc' }}>"{s.message}"</p>
+                      <p className="text-sm mt-1 italic" style={{ color: '#8fa3bc' }}>&quot;{s.message}&quot;</p>
                     )}
                   </div>
                   <div className="text-xs flex-shrink-0" style={{ color: '#8fa3bc' }}>
