@@ -55,8 +55,8 @@ export default function HousingPage() {
     <div>
       <IssueHero
         badge="🏠 Housing"
-        badgeColor="#00b4d8"
-        title={<>Median Home: <span style={{ color: '#f5a623' }}>$420K</span>. Median Income: $78K.</>}
+        badgeColor="var(--teal)"
+        title={<>Median Home: <span style={{ color: 'var(--gold)' }}>$420K</span>. Median Income: $78K.</>}
         subtitle="5.4x price-to-income ratio. Healthy = 3x. Supply gap of 4–7 million units. 26% of single-family purchases are investors. Fix the supply, cap the captivity, give first-time buyers a savings account."
       />
 
@@ -70,22 +70,22 @@ export default function HousingPage() {
 
       <section className="max-w-5xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#00b4d8" bg="rgba(0,180,216,0.1)" border="rgba(0,180,216,0.3)">📊 The Supply Gap</SectionLabel>
+          <SectionLabel color="var(--teal)" bg="color-mix(in srgb, var(--teal) 10%, transparent)" border="color-mix(in srgb, var(--teal) 30%, transparent)">📊 The Supply Gap</SectionLabel>
           <h2 className="text-3xl font-black">The Numbers</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard num="$420K" label="Median Home Price" color="#c8102e" />
-          <StatCard num="5.4x" label="Price-to-Income (Healthy: 3x)" color="#f5a623" />
+          <StatCard num="5.4x" label="Price-to-Income (Healthy: 3x)" color="var(--gold)" />
           <StatCard num="4–7M" label="Housing Unit Shortage" color="#c8102e" />
-          <StatCard num="75%" label="US Land Zoned SF-Only" color="#00b4d8" />
+          <StatCard num="75%" label="US Land Zoned SF-Only" color="var(--teal)" />
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">🛠️ Our Plan</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
           <h2 className="text-3xl font-black">Eight Mechanisms</h2>
-          <p className="text-[#8fa3bc] mt-2">Fix supply. Cap investor captivity. Help first-time buyers save.</p>
+          <p className="text-[var(--muted)] mt-2">Fix supply. Cap investor captivity. Help first-time buyers save.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
@@ -96,9 +96,9 @@ export default function HousingPage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl p-6"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <h3 className="font-bold mb-3" style={{ color: '#f5a623' }}>How This Connects</h3>
-          <ul className="space-y-2 text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <h3 className="font-bold mb-3" style={{ color: 'var(--gold)' }}>How This Connects</h3>
+          <ul className="space-y-2 text-sm" style={{ color: 'var(--muted)' }}>
             <li>• <Link href="/issues/debt-spending" className="underline hover:text-white">Debt + Spending</Link>: phasing out the MID redirects federal savings into the Housing Savings Account match — fiscally disciplined.</li>
             <li>• Housing Savings Account is the same architecture as the <Link href="/issues/healthcare-costs" className="underline hover:text-white">Universal HSA</Link> and the <Link href="/issues/wages-jobs" className="underline hover:text-white">Universal Worker Account</Link>. One savings model, four life needs.</li>
             <li>• <Link href="/issues/inflation" className="underline hover:text-white">Inflation</Link>: housing supply is the biggest single CPI component. Fixing supply fixes shelter inflation at the root.</li>
@@ -108,7 +108,7 @@ export default function HousingPage() {
 
       <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="py-8">
-          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+          <p className="text-xs" style={{ color: 'var(--muted)' }}>
             Sources: National Association of Realtors, Freddie Mac PMMS, Census Bureau ACS, Joint Center for Housing Studies (Harvard), Urban Institute Housing Finance Chartbook, BLM Land Statistics.
           </p>
         </div>

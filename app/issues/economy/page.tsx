@@ -106,8 +106,8 @@ export default function EconomyPillarPage() {
     <div>
       <IssueHero
         badge="💰 Economics Pillar"
-        badgeColor="#f5a623"
-        title={<>Build Wealth From the<br/><span style={{ color: '#f5a623' }}>Bottom Up.</span></>}
+        badgeColor="var(--gold)"
+        title={<>Build Wealth From the<br/><span style={{ color: 'var(--gold)' }}>Bottom Up.</span></>}
         subtitle="The median American is the customer. No corporate donors. Captivity gets regulated, choice gets market. Eight sub-issues, one coherent platform."
       />
 
@@ -124,14 +124,14 @@ function SignaturePrinciple() {
     <section className="py-16 px-4" style={{ background: '#0d1f38' }}>
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
-          style={{ background: 'rgba(6,214,160,0.1)', border: '1px solid rgba(6,214,160,0.3)', color: '#06d6a0' }}>
+          style={{ background: 'color-mix(in srgb, var(--green) 10%, transparent)', border: '1px solid color-mix(in srgb, var(--green) 30%, transparent)', color: 'var(--green)' }}>
           ★ Signature Principle
         </div>
         <h2 className="text-3xl md:text-4xl font-black mb-3">
           Captivity = Regulation.<br/>
-          <span style={{ color: '#06d6a0' }}>Choice = Market.</span>
+          <span style={{ color: 'var(--green)' }}>Choice = Market.</span>
         </h2>
-        <p className="text-[#8fa3bc] text-lg max-w-2xl mx-auto">
+        <p className="text-[var(--muted)] text-lg max-w-2xl mx-auto">
           If a business restricts your ability to self-supply or walk away, government caps markup at 5% or breaks the captivity.
           If you can freely choose, market sets the price. Applies to Disney parks, App Stores, stadiums, Ticketmaster, hospital cafeterias, PBMs — and anywhere else the trick of the trade is preventing you from leaving.
         </p>
@@ -146,7 +146,7 @@ function SubIssuesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-black mb-3">The 8 Sub-Issues</h2>
-          <p className="text-[#8fa3bc]">Each links to the full plan.</p>
+          <p className="text-[var(--muted)]">Each links to the full plan.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SUB_ISSUES.map(s => (
@@ -164,7 +164,7 @@ function CrossThreadsGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-black mb-3">How It All Connects</h2>
-          <p className="text-[#8fa3bc] max-w-xl mx-auto">Seven threads that run across the sub-issues. The Economics platform is one design, not eight unrelated positions.</p>
+          <p className="text-[var(--muted)] max-w-xl mx-auto">Seven threads that run across the sub-issues. The Economics platform is one design, not eight unrelated positions.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {THREADS.map(t => (
@@ -178,17 +178,17 @@ function CrossThreadsGrid() {
 
 function PillarCTA() {
   return (
-    <section className="py-20 px-4 text-center" style={{ background: 'linear-gradient(135deg, #1a2a44, #0a1628)' }}>
+    <section className="py-20 px-4 text-center" style={{ background: 'linear-gradient(135deg, var(--card), var(--navy))' }}>
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl font-black mb-4">
-          Done picking between <span style={{ color: '#f5a623' }}>two bad options</span>?
+          Done picking between <span style={{ color: 'var(--gold)' }}>two bad options</span>?
         </h2>
-        <p className="text-[#8fa3bc] text-lg mb-8">
+        <p className="text-[var(--muted)] text-lg mb-8">
           The Citizens Party Economics platform is the math, the mechanism, and the principle in one place.
         </p>
         <Link href="/join"
-          className="inline-block px-10 py-4 rounded-full font-black text-xl text-[#0a1628] transition-all hover:scale-105"
-          style={{ background: '#f5a623' }}>
+          className="inline-block px-10 py-4 rounded-full font-black text-xl text-[var(--navy)] transition-all hover:scale-105"
+          style={{ background: 'var(--gold)' }}>
           Join the Movement 🦅
         </Link>
       </div>

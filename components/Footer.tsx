@@ -5,10 +5,10 @@ export default function Footer() {
     <footer className="border-t border-white/10 py-10 px-4 text-center"
       style={{ background: '#070f1d' }}>
       <div className="max-w-4xl mx-auto">
-        <div className="text-2xl font-black mb-1" style={{ color: '#f5a623' }}>
+        <div className="text-2xl font-black mb-1" style={{ color: 'var(--gold)' }}>
           🦅 The Citizens Party
         </div>
-        <p className="text-[#8fa3bc] text-sm mb-4">
+        <p className="text-[var(--muted)] text-sm mb-4">
           Not Left. Not Right. <strong className="text-white">Forward.</strong>
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-6 text-sm">
@@ -20,7 +20,7 @@ export default function Footer() {
             { href: '/join', label: 'Join Us' },
           ].map(l => (
             <Link key={l.href} href={l.href}
-              className="text-[#8fa3bc] hover:text-[#f5a623] transition-colors">
+              className="text-[var(--muted)] hover:text-[var(--gold)] transition-colors">
               {l.label}
             </Link>
           ))}

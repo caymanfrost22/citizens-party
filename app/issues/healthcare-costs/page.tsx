@@ -45,8 +45,8 @@ export default function HealthcareCostsPage() {
     <div>
       <IssueHero
         badge="💊 Healthcare Costs"
-        badgeColor="#06d6a0"
-        title={<>Americans Pay <span style={{ color: '#f5a623' }}>2–3x</span> for the Same Drugs.</>}
+        badgeColor="var(--green)"
+        title={<>Americans Pay <span style={{ color: 'var(--gold)' }}>2–3x</span> for the Same Drugs.</>}
         subtitle="US spends $4.5T/yr on healthcare — 18% of GDP, vs 9–12% in peer nations. The system isn't broken. It's working exactly as the middlemen designed it. We break the captivity."
       />
 
@@ -60,22 +60,22 @@ export default function HealthcareCostsPage() {
 
       <section className="max-w-5xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">📊 The Cost Problem</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">📊 The Cost Problem</SectionLabel>
           <h2 className="text-3xl font-black">Math That Should Not Exist</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard num="$4.5T" label="US Healthcare Spend / Year" color="#c8102e" />
-          <StatCard num="18%" label="Of GDP (Peers: 9–12%)" color="#f5a623" />
+          <StatCard num="18%" label="Of GDP (Peers: 9–12%)" color="var(--gold)" />
           <StatCard num="2–3x" label="US Drug Prices vs Peers" color="#c8102e" />
-          <StatCard num="80%" label="PBM Market Held by 3 Firms" color="#f5a623" />
+          <StatCard num="80%" label="PBM Market Held by 3 Firms" color="var(--gold)" />
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">🛠️ Our Plan</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
           <h2 className="text-3xl font-black">Break the Captivity</h2>
-          <p className="text-[#8fa3bc] mt-2">Drugs, PBMs, hospitals, admin — every layer of the cost stack.</p>
+          <p className="text-[var(--muted)] mt-2">Drugs, PBMs, hospitals, admin — every layer of the cost stack.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
@@ -86,9 +86,9 @@ export default function HealthcareCostsPage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl p-6"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <h3 className="font-bold mb-3" style={{ color: '#f5a623' }}>How This Connects</h3>
-          <ul className="space-y-2 text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <h3 className="font-bold mb-3" style={{ color: 'var(--gold)' }}>How This Connects</h3>
+          <ul className="space-y-2 text-sm" style={{ color: 'var(--muted)' }}>
             <li>• <Link href="/issues/debt-spending" className="underline hover:text-white">Debt + Spending</Link>: drug negotiation here stacks with Medicare expansion there.</li>
             <li>• PBM divestiture follows our signature principle: when the consumer is captive (employer/insurer picks for you), captivity gets regulated. When the consumer chooses freely (<Link href="/issues/big-tech" className="underline hover:text-white">Big Tech</Link>), market sets the price.</li>
             <li>• Universal HSA from birth is the same architecture as the <Link href="/issues/housing" className="underline hover:text-white">Housing Savings Account</Link> and the <Link href="/issues/wages-jobs" className="underline hover:text-white">Universal Worker Account</Link>.</li>
@@ -98,7 +98,7 @@ export default function HealthcareCostsPage() {
 
       <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="py-8">
-          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+          <p className="text-xs" style={{ color: 'var(--muted)' }}>
             Sources: CMS National Health Expenditure data, OECD Health Statistics, RAND International Price Index, FTC PBM Interim Report (2024), Kaiser Family Foundation, Yale Budget Lab.
           </p>
         </div>

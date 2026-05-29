@@ -46,7 +46,7 @@ export default function DebtSpendingPage() {
       <IssueHero
         badge="💸 Debt + Federal Spending"
         badgeColor="#c8102e"
-        title={<>The <span style={{ color: '#f5a623' }}>$39 Trillion</span> Problem.</>}
+        title={<>The <span style={{ color: 'var(--gold)' }}>$39 Trillion</span> Problem.</>}
         subtitle="$1T/yr in interest builds nothing. Both parties pretend their half of the budget is untouchable. Honest math + sovereign-wealth Social Security + Pentagon audit teeth + sunset everything = debt-to-GDP under 50% in 20–30 years."
       />
 
@@ -65,17 +65,17 @@ export default function DebtSpendingPage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard num="$39T" label="Total National Debt" color="#c8102e" />
-          <StatCard num="127%" label="Debt-to-GDP Ratio" color="#f5a623" />
+          <StatCard num="127%" label="Debt-to-GDP Ratio" color="var(--gold)" />
           <StatCard num="$1T+" label="Annual Interest on Debt" color="#c8102e" />
-          <StatCard num="47%" label="Budget = SS + Medicare + Medicaid" color="#00b4d8" />
+          <StatCard num="47%" label="Budget = SS + Medicare + Medicaid" color="var(--teal)" />
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
-          <SectionLabel color="#06d6a0" bg="rgba(6,214,160,0.1)" border="rgba(6,214,160,0.3)">🛠️ Our Plan</SectionLabel>
+          <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
           <h2 className="text-3xl font-black">Six Mechanisms, One Goal</h2>
-          <p className="text-[#8fa3bc] mt-2">Debt-to-GDP under 50% in 20–30 years.</p>
+          <p className="text-[var(--muted)] mt-2">Debt-to-GDP under 50% in 20–30 years.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
@@ -86,9 +86,9 @@ export default function DebtSpendingPage() {
 
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl p-6"
-          style={{ background: 'rgba(245,166,35,0.06)', border: '1px solid rgba(245,166,35,0.2)' }}>
-          <h3 className="font-bold mb-3" style={{ color: '#f5a623' }}>How This Connects</h3>
-          <ul className="space-y-2 text-sm" style={{ color: '#8fa3bc' }}>
+          style={{ background: 'color-mix(in srgb, var(--gold) 6%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
+          <h3 className="font-bold mb-3" style={{ color: 'var(--gold)' }}>How This Connects</h3>
+          <ul className="space-y-2 text-sm" style={{ color: 'var(--muted)' }}>
             <li>• <Link href="/issues/taxes" className="underline hover:text-white">Tax reform</Link> handles the revenue side. This page handles the spending side. Together they balance the equation.</li>
             <li>• <Link href="/issues/healthcare-costs" className="underline hover:text-white">Healthcare costs</Link>: drug-price negotiation here applies to Medicare; international reference pricing in healthcare-costs applies to everyone else.</li>
             <li>• <Link href="/issues/trade" className="underline hover:text-white">Trade + Tariffs</Link>: Buy American 100% on strategic goods + reshored defense manufacturing is the supply-side companion to Pentagon audit accountability.</li>
@@ -98,7 +98,7 @@ export default function DebtSpendingPage() {
 
       <section className="px-4 text-center" style={{ background: '#0d1f38', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="py-8">
-          <p className="text-xs" style={{ color: '#8fa3bc' }}>
+          <p className="text-xs" style={{ color: 'var(--muted)' }}>
             Sources: CBO Budget Outlook, Treasury Direct, GAO Annual Audit Report, OECD Government Debt-to-GDP, Canada Pension Plan Investment Board (CPPIB) Annual Report, Norges Bank Investment Management.
           </p>
         </div>

@@ -12,7 +12,7 @@ export default function Accordion({ title, children }: AccordionProps) {
   return (
     <div
       className="rounded-2xl overflow-hidden mb-3"
-      style={{ border: '1px solid rgba(255,255,255,0.08)', background: '#1a2a44' }}
+      style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'var(--card)' }}
     >
       <button
         type="button"
@@ -22,7 +22,7 @@ export default function Accordion({ title, children }: AccordionProps) {
         aria-controls={panelId}
       >
         <span>{title}</span>
-        <span style={{ color: '#f5a623', fontSize: '1.2rem', lineHeight: 1 }} aria-hidden="true">
+        <span style={{ color: 'var(--gold)', fontSize: '1.2rem', lineHeight: 1 }} aria-hidden="true">
           {open ? '−' : '+'}
         </span>
       </button>
@@ -30,7 +30,7 @@ export default function Accordion({ title, children }: AccordionProps) {
         id={panelId}
         hidden={!open}
         className="px-5 pb-5 text-sm"
-        style={{ color: '#8fa3bc', borderTop: '1px solid rgba(255,255,255,0.06)' }}
+        style={{ color: 'var(--muted)', borderTop: '1px solid rgba(255,255,255,0.06)' }}
       >
         <div className="pt-4">{children}</div>
       </div>

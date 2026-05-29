@@ -9,9 +9,9 @@ interface SectionLabelProps {
 
 export default function SectionLabel({
   children,
-  color = '#00b4d8',
-  bg = 'rgba(0,180,216,0.1)',
-  border = 'rgba(0,180,216,0.3)',
+  color = 'var(--teal)',
+  bg = 'color-mix(in srgb, var(--teal) 10%, transparent)',
+  border = 'color-mix(in srgb, var(--teal) 30%, transparent)',
 }: SectionLabelProps) {
   return (
     <div

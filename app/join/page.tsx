@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 
 const reasons = [
   { icon: '🏠', text: 'Housing I can actually afford' },
@@ -31,65 +30,65 @@ export default function JoinPage() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Something went wrong')
       setStatus('success')
-    } catch (err: unknown) {
-      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong')
+    } catch (err: any) {
+      setErrorMsg(err.message)
       setStatus('error')
     }
   }
 
   if (status === 'success') {
     return (
-      <main className="min-h-screen flex items-center justify-center px-4" style={{ background: '#0a1628' }}>
+      <main className="min-h-screen flex items-center justify-center px-4" style={{ background: 'var(--navy)' }}>
         <div className="max-w-lg w-full text-center">
           <div className="text-7xl mb-6">🎉</div>
-          <h1 className="text-4xl font-black text-white mb-4">You&apos;re In!</h1>
-          <p className="text-xl mb-6" style={{ color: '#8fa3bc' }}>
+          <h1 className="text-4xl font-black text-white mb-4">You're In!</h1>
+          <p className="text-xl mb-6" style={{ color: 'var(--muted)' }}>
             Welcome to The Citizens Party, {form.name || 'patriot'}. You just joined a movement that puts people over politics.
           </p>
           <div
             className="rounded-2xl p-6 mb-8 text-left"
-            style={{ background: 'rgba(6,214,160,0.1)', border: '1px solid rgba(6,214,160,0.3)' }}
+            style={{ background: 'color-mix(in srgb, var(--green) 10%, transparent)', border: '1px solid color-mix(in srgb, var(--green) 30%, transparent)' }}
           >
             <h3 className="font-bold text-white mb-3">What happens next:</h3>
-            <ul className="space-y-2" style={{ color: '#8fa3bc' }}>
-              <li>✅ You&apos;ll receive a confirmation email</li>
-              <li>📣 We&apos;ll keep you updated on our launch campaign</li>
-              <li>🗳️ You&apos;ll be first to know when we file for ballot access</li>
+            <ul className="space-y-2" style={{ color: 'var(--muted)' }}>
+              <li>✅ You'll receive a confirmation email</li>
+              <li>📣 We'll keep you updated on our launch campaign</li>
+              <li>🗳️ You'll be first to know when we file for ballot access</li>
               <li>📢 Share this with people who feel left behind by both parties</li>
             </ul>
           </div>
-          <Link
+          <a
             href="/"
             className="inline-block px-8 py-3 rounded-full font-bold"
-            style={{ background: '#f5a623', color: '#0a1628' }}
+            style={{ background: 'var(--gold)', color: 'var(--navy)' }}
           >
             Back to Home
-          </Link>
+          </a>
         </div>
       </main>
     )
   }
 
   return (
-    <main className="min-h-screen" style={{ background: '#0a1628' }}>
+    <main className="min-h-screen" style={{ background: 'var(--navy)' }}>
       {/* Hero */}
       <section
         className="py-20 px-4 text-center"
-        style={{ background: 'linear-gradient(135deg, #0a1628 0%, #0d2040 50%, #0a1628 100%)' }}
+        style={{ background: 'linear-gradient(135deg, var(--navy) 0%, #0d2040 50%, var(--navy) 100%)' }}
       >
         <div className="max-w-3xl mx-auto">
           <div
             className="inline-block mb-6 px-4 py-2 rounded-full text-sm font-semibold"
-            style={{ background: 'rgba(6,214,160,0.15)', color: '#06d6a0', border: '1px solid rgba(6,214,160,0.3)' }}
+            style={{ background: 'color-mix(in srgb, var(--green) 15%, transparent)', color: 'var(--green)', border: '1px solid color-mix(in srgb, var(--green) 30%, transparent)' }}
           >
             🚀 Join the Movement
           </div>
           <h1 className="text-5xl font-black mb-6 leading-tight">
             <span className="text-white">Done waiting for</span>{' '}
-            <span style={{ color: '#f5a623' }}>change to happen?</span>
+            <span style={{ color: 'var(--gold)' }}>change to happen?</span>
           </h1>
-          <p className="text-xl" style={{ color: '#8fa3bc' }}>
-            The Citizens Party isn&apos;t backed by billionaires or corporations. It&apos;s backed by people like you — who
+          <p className="text-xl" style={{ color: 'var(--muted)' }}>
+            The Citizens Party isn't backed by billionaires or corporations. It's backed by people like you — who
             believe America deserves better than choosing between two broken options.
           </p>
         </div>
@@ -107,7 +106,7 @@ export default function JoinPage() {
                 style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
               >
                 <span className="text-2xl">{r.icon}</span>
-                <span className="text-sm font-medium" style={{ color: '#8fa3bc' }}>{r.text}</span>
+                <span className="text-sm font-medium" style={{ color: 'var(--muted)' }}>{r.text}</span>
               </div>
             ))}
           </div>
@@ -122,13 +121,13 @@ export default function JoinPage() {
             style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }}
           >
             <h2 className="text-2xl font-black text-white mb-2">Sign Up</h2>
-            <p className="mb-8" style={{ color: '#8fa3bc' }}>
+            <p className="mb-8" style={{ color: 'var(--muted)' }}>
               No spam. No donation asks. Just updates on the movement.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-semibold mb-2" style={{ color: '#8fa3bc' }}>
+                <label className="block text-sm font-semibold mb-2" style={{ color: 'var(--muted)' }}>
                   Your Name
                 </label>
                 <input
@@ -145,7 +144,7 @@ export default function JoinPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold mb-2" style={{ color: '#8fa3bc' }}>
+                <label className="block text-sm font-semibold mb-2" style={{ color: 'var(--muted)' }}>
                   Email Address <span style={{ color: '#c8102e' }}>*</span>
                 </label>
                 <input
@@ -163,7 +162,7 @@ export default function JoinPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold mb-2" style={{ color: '#8fa3bc' }}>
+                <label className="block text-sm font-semibold mb-2" style={{ color: 'var(--muted)' }}>
                   ZIP Code
                 </label>
                 <input
@@ -178,13 +177,13 @@ export default function JoinPage() {
                     border: '1px solid rgba(255,255,255,0.12)',
                   }}
                 />
-                <p className="text-xs mt-1" style={{ color: '#8fa3bc' }}>
+                <p className="text-xs mt-1" style={{ color: 'var(--muted)' }}>
                   Helps us understand where support is growing
                 </p>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold mb-2" style={{ color: '#8fa3bc' }}>
+                <label className="block text-sm font-semibold mb-2" style={{ color: 'var(--muted)' }}>
                   Why are you joining? <span className="font-normal">(optional)</span>
                 </label>
                 <textarea
@@ -214,15 +213,15 @@ export default function JoinPage() {
                 disabled={status === 'loading'}
                 className="w-full py-4 rounded-xl text-lg font-bold transition-all"
                 style={{
-                  background: status === 'loading' ? 'rgba(6,214,160,0.5)' : '#06d6a0',
-                  color: '#0a1628',
+                  background: status === 'loading' ? 'color-mix(in srgb, var(--green) 50%, transparent)' : 'var(--green)',
+                  color: 'var(--navy)',
                   cursor: status === 'loading' ? 'not-allowed' : 'pointer',
                 }}
               >
                 {status === 'loading' ? 'Joining...' : 'Join the Movement →'}
               </button>
 
-              <p className="text-center text-xs" style={{ color: '#8fa3bc' }}>
+              <p className="text-center text-xs" style={{ color: 'var(--muted)' }}>
                 We never sell or share your information. Ever.
               </p>
             </form>
@@ -230,7 +229,7 @@ export default function JoinPage() {
 
           {/* Credibility note */}
           <div className="mt-8 text-center">
-            <p className="text-sm" style={{ color: '#8fa3bc' }}>
+            <p className="text-sm" style={{ color: 'var(--muted)' }}>
               Join thousands of Americans who are done choosing between the lesser of two evils.
             </p>
           </div>

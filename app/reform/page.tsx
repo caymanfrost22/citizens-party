@@ -5,7 +5,7 @@ const phases = [
     phase: 'Phase 1',
     days: 'Days 1–10',
     title: 'Emergency Transparency Orders',
-    color: '#f5a623',
+    color: 'var(--gold)',
     icon: '🔍',
     actions: [
       {
@@ -44,7 +44,7 @@ const phases = [
     phase: 'Phase 2',
     days: 'Days 11–30',
     title: 'Economic Relief & Tax Reform',
-    color: '#00b4d8',
+    color: 'var(--teal)',
     icon: '💰',
     actions: [
       {
@@ -78,7 +78,7 @@ const phases = [
     phase: 'Phase 3',
     days: 'Days 31–60',
     title: 'Healthcare & Education Overhaul',
-    color: '#06d6a0',
+    color: 'var(--green)',
     icon: '🏥',
     actions: [
       {
@@ -180,28 +180,28 @@ const phases = [
 
 export default function ReformPage() {
   return (
-    <main className="min-h-screen" style={{ background: '#0a1628' }}>
+    <main className="min-h-screen" style={{ background: 'var(--navy)' }}>
       {/* Hero */}
-      <section className="py-20 px-4 text-center" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #0d2040 50%, #0a1628 100%)' }}>
+      <section className="py-20 px-4 text-center" style={{ background: 'linear-gradient(135deg, var(--navy) 0%, #0d2040 50%, var(--navy) 100%)' }}>
         <div className="max-w-4xl mx-auto">
-          <div className="inline-block mb-6 px-4 py-2 rounded-full text-sm font-semibold" style={{ background: 'rgba(245,166,35,0.15)', color: '#f5a623', border: '1px solid rgba(245,166,35,0.3)' }}>
+          <div className="inline-block mb-6 px-4 py-2 rounded-full text-sm font-semibold" style={{ background: 'color-mix(in srgb, var(--gold) 15%, transparent)', color: 'var(--gold)', border: '1px solid color-mix(in srgb, var(--gold) 30%, transparent)' }}>
             ⚡ The Action Plan
           </div>
           <h1 className="text-5xl font-black mb-6 leading-tight">
-            <span style={{ color: '#f5a623' }}>100 Days.</span>{' '}
+            <span style={{ color: 'var(--gold)' }}>100 Days.</span>{' '}
             <span className="text-white">Real Change.</span>
           </h1>
-          <p className="text-xl mb-4" style={{ color: '#8fa3bc' }}>
+          <p className="text-xl mb-4" style={{ color: 'var(--muted)' }}>
             Not promises. Not talking points. A day-by-day action plan — specific, measurable, and accountable.
           </p>
-          <p className="text-base" style={{ color: '#8fa3bc' }}>
+          <p className="text-base" style={{ color: 'var(--muted)' }}>
             Every action below is tied to an executive order, legislation, or agency directive. No vague goals.
           </p>
         </div>
       </section>
 
       {/* Stats Strip */}
-      <div className="py-8 px-4" style={{ background: 'rgba(245,166,35,0.08)', borderTop: '1px solid rgba(245,166,35,0.2)', borderBottom: '1px solid rgba(245,166,35,0.2)' }}>
+      <div className="py-8 px-4" style={{ background: 'color-mix(in srgb, var(--gold) 8%, transparent)', borderTop: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)', borderBottom: '1px solid color-mix(in srgb, var(--gold) 20%, transparent)' }}>
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { value: '5', label: 'Reform Phases' },
@@ -210,8 +210,8 @@ export default function ReformPage() {
             { value: '0', label: 'Corporate Donors' },
           ].map((stat) => (
             <div key={stat.label}>
-              <div className="text-4xl font-black" style={{ color: '#f5a623' }}>{stat.value}</div>
-              <div className="text-sm mt-1" style={{ color: '#8fa3bc' }}>{stat.label}</div>
+              <div className="text-4xl font-black" style={{ color: 'var(--gold)' }}>{stat.value}</div>
+              <div className="text-sm mt-1" style={{ color: 'var(--muted)' }}>{stat.label}</div>
             </div>
           ))}
         </div>
@@ -259,7 +259,7 @@ export default function ReformPage() {
                         style={{
                           left: '-2.25rem',
                           top: '1.5rem',
-                          background: '#0a1628',
+                          background: 'var(--navy)',
                           borderColor: phase.color,
                           color: phase.color,
                         }}
@@ -276,7 +276,7 @@ export default function ReformPage() {
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-white mb-2">{action.title}</h3>
-                          <p style={{ color: '#8fa3bc' }} className="leading-relaxed">
+                          <p style={{ color: 'var(--muted)' }} className="leading-relaxed">
                             {action.description}
                           </p>
                         </div>
@@ -291,20 +291,20 @@ export default function ReformPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 px-4 text-center" style={{ background: 'rgba(6,214,160,0.05)', borderTop: '1px solid rgba(6,214,160,0.15)' }}>
+      <section className="py-20 px-4 text-center" style={{ background: 'color-mix(in srgb, var(--green) 5%, transparent)', borderTop: '1px solid color-mix(in srgb, var(--green) 15%, transparent)' }}>
         <div className="max-w-2xl mx-auto">
           <div className="text-5xl mb-6">🗳️</div>
           <h2 className="text-3xl font-black text-white mb-4">
             This Only Works With You
           </h2>
-          <p className="text-lg mb-8" style={{ color: '#8fa3bc' }}>
+          <p className="text-lg mb-8" style={{ color: 'var(--muted)' }}>
             Every reform on this list has been blocked before — by lobbyists, donors, and career politicians.
             The only force strong enough to push through is a united citizenry.
           </p>
           <a
             href="/join"
             className="inline-block px-10 py-4 rounded-full text-lg font-bold transition-all"
-            style={{ background: '#06d6a0', color: '#0a1628' }}
+            style={{ background: 'var(--green)', color: 'var(--navy)' }}
           >
             Join the Movement →
           </a>

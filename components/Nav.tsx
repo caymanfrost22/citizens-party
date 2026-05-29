@@ -20,13 +20,13 @@ export default function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-[#f5a623]/30"
-      style={{ background: 'rgba(10,22,40,0.97)', backdropFilter: 'blur(12px)' }}>
+    <nav className="sticky top-0 z-50 border-b border-[var(--gold)]/30"
+      style={{ background: 'color-mix(in srgb, var(--navy) 97%, transparent)', backdropFilter: 'blur(12px)' }}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-black text-lg">
           <span className="text-2xl">🦅</span>
-          <span style={{ color: '#f5a623' }}>The Citizens Party</span>
+          <span style={{ color: 'var(--gold)' }}>The Citizens Party</span>
         </Link>
 
         {/* Desktop links */}
@@ -35,19 +35,19 @@ export default function Nav() {
             <Link key={l.href} href={l.href}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all
                 ${pathname === l.href || (l.href !== '/' && l.href !== '/issues' && pathname?.startsWith(l.href + '/'))
-                  ? 'text-[#f5a623] border border-[#f5a623]/40 bg-[#f5a623]/10'
-                  : 'text-[#8fa3bc] hover:text-[#f5a623]'}`}>
+                  ? 'text-[var(--gold)] border border-[var(--gold)]/40 bg-[var(--gold)]/10'
+                  : 'text-[var(--muted)] hover:text-[var(--gold)]'}`}>
               {l.label}
             </Link>
           ))}
           <Link href="/join"
-            className="ml-3 px-5 py-2 rounded-full text-sm font-bold text-[#0a1628] bg-[#f5a623] hover:bg-[#ffd166] transition-colors">
+            className="ml-3 px-5 py-2 rounded-full text-sm font-bold text-[var(--navy)] bg-[var(--gold)] hover:bg-[#ffd166] transition-colors">
             Join the Movement
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-[#8fa3bc] hover:text-[#f5a623]" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-[var(--muted)] hover:text-[var(--gold)]" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -60,12 +60,12 @@ export default function Nav() {
             <Link key={l.href} href={l.href}
               onClick={() => setOpen(false)}
               className={`px-4 py-2 rounded-lg text-sm font-semibold
-                ${pathname === l.href || (l.href !== '/' && l.href !== '/issues' && pathname?.startsWith(l.href + '/')) ? 'text-[#f5a623] bg-[#f5a623]/10' : 'text-[#8fa3bc]'}`}>
+                ${pathname === l.href || (l.href !== '/' && l.href !== '/issues' && pathname?.startsWith(l.href + '/')) ? 'text-[var(--gold)] bg-[var(--gold)]/10' : 'text-[var(--muted)]'}`}>
               {l.label}
             </Link>
           ))}
           <Link href="/join" onClick={() => setOpen(false)}
-            className="mt-2 px-5 py-2 rounded-full text-sm font-bold text-[#0a1628] bg-[#f5a623] text-center">
+            className="mt-2 px-5 py-2 rounded-full text-sm font-bold text-[var(--navy)] bg-[var(--gold)] text-center">
             Join the Movement
           </Link>
         </div>
