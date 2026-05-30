@@ -24,7 +24,7 @@ Hub: `/issues/governance`. 7 sub-issues, all shipped + locked via full deep-dive
 
 Pairs with `/reform` (100-day execution timeline) — cross-linked both directions.
 
-**Methodology established during this pillar (use for all future pillars):** For each sub-issue — (1) present Democrat and Republican positions with both rhetoric and behavior, (2) lay out the full policy option space across every relevant dimension with tradeoffs, (3) give recommended picks, (4) user picks per dimension, (5) rewrite the page + update Supabase platform_positions row + update hub one-liner. Never select stances autonomously.
+**Methodology used for every Governance sub-issue — see "Walkthrough methodology" section at bottom of this file for the canonical version.**
 
 ### 🛡️ Immigration (DONE, standalone deep-dive)
 `/issues/immigration` — pre-dates the pillar pattern. Lives in Social pillar conceptually but ships as a single rich page.
@@ -63,13 +63,27 @@ Master sub-issue list:
 | 2 | Energy policy (oil/gas, nuclear, renewables) | partial in `/issues/inflation` — needs own page |
 | 3 | Public lands / environment regulation | not started |
 
-# Page model
+# Site structure — page roles (locked 2026-05-29)
 
-**Hub page** (e.g. `/issues/{pillar}`): `IssueHero` (pillar color) + Signature Principle + `SubIssueCard` grid + `CrossThread` grid + optional execution-link callout + CTA.
+Each page has a distinct purpose. Do not duplicate content across them.
 
-**Sub-issue page** (e.g. `/issues/{slug}`): `IssueHero` + `ThreeWayCompare` + `StatCard` grid + 5–6 `MechanismCard`s + "How This Connects" cross-link block + sources footer.
+| Page | Purpose | Source |
+|---|---|---|
+| `/platform` | **High-level pillar overview.** Hero + 5 pillar cards w/ status badges (shipped/in_progress/planned) + "Catchphrases We Stand On" grid + brand frame + CTA. Identity-level view. Static hardcoded `PILLARS` + `CATCHPHRASES` arrays in the page file. | hardcoded |
+| `/issues` | **Side-by-side D/R/Us comparison table.** Quick-scan view. All active positions in one flat table/card list. Links to sub-issue pages where `issueRoutes` map has an entry. | Supabase `platform_positions` |
+| `/issues/{pillar}` | **Pillar hub.** `IssueHero` (pillar color) + Signature Principle + `SubIssueCard` grid + `CrossThread` grid + optional `ExecutionLink` callout + `PillarCTA`. One per pillar. Hardcoded sub-issue list + cross-threads in the file. | hardcoded |
+| `/issues/{slug}` | **Deep-dive sub-issue page.** `IssueHero` + `ThreeWayCompare` + `StatCard` grid + 5–13 `MechanismCard`s + optional sidebar callouts + "How This Connects" cross-link block + sources footer. One per sub-issue. | hardcoded |
+| `/reform` | **100-day execution timeline.** Day-by-day what-we-do-in-office plan. Cross-links to relevant pillar hubs. | hardcoded |
 
-Pillar accent colors (lib/supabase.ts `categoryColors`):
+When you add new content: figure out which level it belongs at and put it there. Do not bolt it onto a different page just because that page already exists.
+
+# Nav structure
+
+`components/Nav.tsx` carries: Home | Platform | Issues | one link per shipped pillar hub (with pillar emoji) | Reform Plan | Join Us. Do NOT add individual sub-issue pages to nav — they are reachable via their pillar hub. Exception: a pre-pillar standalone deep-dive (Immigration today) can carry its own nav link until folded into its eventual pillar.
+
+When a new pillar ships, add ONE nav link to `/issues/{pillar}` with the pillar emoji.
+
+# Pillar accent colors (lib/supabase.ts `categoryColors`)
 - Economic = `var(--gold)`
 - Governance = `var(--teal)`
 - Social = `var(--green)`
@@ -83,9 +97,17 @@ Pillar accent colors (lib/supabase.ts `categoryColors`):
 
 # Wiring checklist per pillar
 
-1. Insert/update Supabase `platform_positions` rows (`category`, `priority`, `active=true`)
-2. Add hub page `/app/issues/{pillar}/page.tsx`
-3. Add 1 sub-issue page per row
-4. Add slug routes to `issueRoutes` in `/app/issues/page.tsx`
-5. Add link/banner from `/reform` if execution-relevant
-6. Update this file's status table
+When a new pillar (or new sub-issue inside an existing pillar) ships:
+
+1. **Supabase** — insert/update `platform_positions` rows: `issue`, `issue_icon`, `category`, `dem_position`, `rep_position`, `peoples_position`, `our_detail`, `priority`, `active=true`. Use Supabase MCP tool `execute_sql` (project ID `hrmizxbkwujkpwwzxgjj`).
+2. **Hub page** — if new pillar, create `app/issues/{pillar}/page.tsx`. If new sub-issue inside existing pillar, add it to the existing hub's `SUB_ISSUES` array AND add a `CrossThread` entry that includes it in `appliesTo` where relevant. Update hub `subtitle` + `SubIssuesGrid` heading count.
+3. **Sub-issue page** — create `app/issues/{slug}/page.tsx` following the locked page model.
+4. **Issues route map** — add slug to `issueRoutes` in `app/issues/page.tsx` (plus any aliases — e.g. "Voting Rights" → `/issues/voting-reform`).
+5. **Platform overview** — if new pillar, add a `Pillar` entry to `PILLARS` in `app/platform/page.tsx`. Update status badge as pillar progresses. Add the signature catchphrase + key catchphrases to `CATCHPHRASES` array.
+6. **Nav** — if new pillar, add a `{ href: '/issues/{pillar}', label: '{emoji} {Pillar Name}' }` entry to `links` in `components/Nav.tsx`. Do NOT add sub-issues to nav.
+7. **Reform page** — if execution-relevant, add link/banner from `/reform`.
+8. **CLAUDE.md** — update this file's pillar status section with sub-issue title, mechanism count, and locked stack summary.
+
+# Walkthrough methodology (locked 2026-05-29 during Governance pillar)
+
+For each sub-issue: (1) present Democrat and Republican positions with both rhetoric and behavior, (2) lay out the full policy option space across every relevant dimension with tradeoffs, (3) give recommended picks, (4) wait for user picks per dimension, (5) write the page + update Supabase row + update hub one-liner. Never select stances autonomously.
