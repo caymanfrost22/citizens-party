@@ -42,6 +42,12 @@ const SUB_ISSUES = [
     oneLiner: '10yr default sunset on every law, agency, and regulation. Variable cycles allowed only with explicit vote. Narrow carve-outs — Bill of Rights, civil rights ratchet, entitlement benefits. Standalone votes default. 12mo advance GAO + IG report. AI-summarized citizen comment into record. Hard sunset on failure. Treaties reviewed every 10yr. Statutory Act now + Article V amendment in parallel.',
     href: '/issues/sunset-clauses',
   },
+  {
+    icon: '📜',
+    title: 'Legislative Process Reform',
+    oneLiner: 'One bill, one subject — modeled on 43 states. Overall budget OK, specific funding separate. 72hr read-time + CBO score before vote. Germaneness required both chambers + conference. Earmarks banned — each gets own bill. AI plain-language summary into the record. Reconciliation subject to single-subject. Statutory rules now + Article V amendment in parallel.',
+    href: '/issues/legislative-process',
+  },
 ] as const
 
 const THREADS = [
@@ -81,6 +87,12 @@ const THREADS = [
     description: 'Every federal program ships measurable outcome metrics. Miss 3 years running — funding cut. Replaces the "we increased spending" theatrics of both parties with actual results, agency by agency, year by year.',
     appliesTo: ['Bureaucracy Reform', 'Sunset Clauses'],
   },
+  {
+    icon: '📜',
+    title: 'One bill, one subject',
+    description: 'No more 4,000-page omnibus packages. No more pet-project earmarks smuggled into disaster relief. Single-subject rule for every bill — modeled on 43 state constitutions. Overall budget allowed as one bill; specific funding to NGOs, agencies, contractors gets its own standalone vote. 72-hour read-time + CBO score required before any vote. Citizens see what their representatives are voting on.',
+    appliesTo: ['Legislative Process Reform', 'Sunset Clauses', 'Lobbying Ban'],
+  },
 ] as const
 
 export default function GovernancePillarPage() {
@@ -90,7 +102,7 @@ export default function GovernancePillarPage() {
         badge="🏛️ Governance Pillar"
         badgeColor="var(--teal)"
         title={<>Government Works for <span style={{ color: 'var(--teal)' }}>Citizens.</span><br/>Not Careers or Donors.</>}
-        subtitle="Both parties built the rules to protect themselves. We rewrite them — and play by them first. 24-hour disclosure on every dollar. No lifetime seats. No K Street pipeline. Six mechanisms, one principle."
+        subtitle="Both parties built the rules to protect themselves. We rewrite them — and play by them first. 24-hour disclosure on every dollar. No lifetime seats. No K Street pipeline. One bill, one subject. Seven mechanisms, one principle."
       />
 
       <SignaturePrinciple />
@@ -127,7 +139,7 @@ function SubIssuesGrid() {
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-black mb-3">The 6 Sub-Issues</h2>
+          <h2 className="text-3xl font-black mb-3">The 7 Sub-Issues</h2>
           <p className="text-[var(--muted)]">Each links to the full plan.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
