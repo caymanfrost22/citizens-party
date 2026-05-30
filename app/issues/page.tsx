@@ -27,6 +27,8 @@ const issueRoutes: Record<string, string> = {
   'Bureaucracy Reform': '/issues/bureaucracy-reform',
   'Government Waste': '/issues/bureaucracy-reform',
   'Sunset Clauses': '/issues/sunset-clauses',
+  'Legislative Process Reform': '/issues/legislative-process',
+  'Single Subject Rule': '/issues/legislative-process',
 }
 
 export default async function IssuesPage() {
