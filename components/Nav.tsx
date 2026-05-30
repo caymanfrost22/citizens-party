@@ -9,7 +9,7 @@ const links = [
   { href: '/platform', label: 'Platform' },
   { href: '/issues', label: 'Issues' },
   { href: '/issues/economy', label: '💰 Economics' },
-  { href: '/issues/taxes', label: 'Tax Reform' },
+  { href: '/issues/governance', label: '🏛️ Governance' },
   { href: '/issues/immigration', label: '🛡️ Immigration' },
   { href: '/reform', label: 'Reform Plan' },
   { href: '/join', label: 'Join Us' },
