@@ -21,7 +21,7 @@ const SUB_ISSUES = [
   {
     icon: '🗳️',
     title: 'Voting Reform',
-    oneLiner: 'Ranked-choice voting national. Auto-registration at 18 + free secure ID. 15-day early voting standard. Paper audit trails required.',
+    oneLiner: 'Ranked-choice all federal races. Auto-reg at 18 with back-end citizenship verify. Free federal ID replacing state DL (biometric opt-in). 7-day early voting. Paper trail + audits. Algorithmic redistricting. Felons restored post-supervision.',
     href: '/issues/voting-reform',
   },
   {
@@ -33,13 +33,13 @@ const SUB_ISSUES = [
   {
     icon: '⚙️',
     title: 'Bureaucracy Reform',
-    oneLiner: 'Mandatory GAO implementation in 18 months. 2,400 programs → 800 outcome-focused. Results-based budgeting. Cut documented waste.',
+    oneLiner: 'Mandatory GAO implementation in 18 months with auto budget cut. Honest program consolidation, no quota. Results-based budgeting. 10yr agency sunset. Full contract rebuild — commercial-first, OTA, vendor pools, prize-model, performance bonds, 5yr contract sunset. Per-agency workforce caps voted each cycle. Unified IG network. Real-time spending dashboard with AI anomaly flagging.',
     href: '/issues/bureaucracy-reform',
   },
   {
     icon: '⏳',
     title: 'Sunset Clauses',
-    oneLiner: 'Every federal law + every agency auto-expires after 10 years. Reauthorize or it dies. No omnibus bundles — each gets its own vote.',
+    oneLiner: '10yr default sunset on every law, agency, and regulation. Variable cycles allowed only with explicit vote. Narrow carve-outs — Bill of Rights, civil rights ratchet, entitlement benefits. Standalone votes default. 12mo advance GAO + IG report. AI-summarized citizen comment into record. Hard sunset on failure. Treaties reviewed every 10yr. Statutory Act now + Article V amendment in parallel.',
     href: '/issues/sunset-clauses',
   },
 ] as const
