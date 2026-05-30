@@ -48,11 +48,11 @@ const PILLARS: Pillar[] = [
     icon: '🤝',
     title: 'Social',
     color: 'var(--green)',
-    catchphrase: 'Coming next — education first.',
-    subtitle: 'In active development. Sub-issues queued: education, crime + criminal justice, drug policy, healthcare access, second amendment, abortion. Immigration already shipped standalone.',
+    catchphrase: 'Invest in the future. Don\'t profit off it.',
+    subtitle: 'In active development — education shipped first. Modern curriculum, equal statewide funding, capped affordable college. Queued: crime + criminal justice, drug policy, healthcare access, second amendment, abortion. Immigration shipped standalone.',
     status: 'in_progress',
     subIssueCount: 6,
-    href: null,
+    href: '/issues/social',
   },
   {
     icon: '🌍',
@@ -142,6 +142,12 @@ const CATCHPHRASES: Catchphrase[] = [
     text: 'Single citizenship. Single standard.',
     context: 'Dual citizenship fine as a private American. But federal office, security clearance, or political donations above $10K require single US citizenship. Pick: politics or two passports.',
     pillar: 'Immigration',
+    color: 'var(--green)',
+  },
+  {
+    text: 'Invest in the future, don\'t profit off it.',
+    context: 'Equal per-student funding pooled statewide + federal floor + a national education lottery to end zip-code apartheid. Modern curriculum — personal finance, home ec, shop/trades, real history, tech in every class. Capped college loans ($40K / 4%), no bailout, no bloat.',
+    pillar: 'Social',
     color: 'var(--green)',
   },
 ]

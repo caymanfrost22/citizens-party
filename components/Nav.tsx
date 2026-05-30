@@ -10,6 +10,7 @@ const links = [
   { href: '/issues', label: 'Issues' },
   { href: '/issues/economy', label: '💰 Economics' },
   { href: '/issues/governance', label: '🏛️ Governance' },
+  { href: '/issues/social', label: '🤝 Social' },
   { href: '/issues/immigration', label: '🛡️ Immigration' },
   { href: '/reform', label: 'Reform Plan' },
   { href: '/join', label: 'Join Us' },

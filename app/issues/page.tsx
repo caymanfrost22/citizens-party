@@ -29,6 +29,11 @@ const issueRoutes: Record<string, string> = {
   'Sunset Clauses': '/issues/sunset-clauses',
   'Legislative Process Reform': '/issues/legislative-process',
   'Single Subject Rule': '/issues/legislative-process',
+  // Social pillar
+  'Education': '/issues/education',
+  'K-12 Education': '/issues/education',
+  'Student Debt': '/issues/education',
+  'School Choice': '/issues/education',
 }
 
 export default async function IssuesPage() {
