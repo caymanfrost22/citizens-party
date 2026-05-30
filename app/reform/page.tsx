@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const revalidate = 3600
 
 const phases = [
@@ -197,6 +199,13 @@ export default function ReformPage() {
           <p className="text-base" style={{ color: 'var(--muted)' }}>
             Every action below is tied to an executive order, legislation, or agency directive. No vague goals.
           </p>
+          <div className="mt-6">
+            <Link href="/issues/governance"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold transition-all hover:scale-105"
+              style={{ background: 'color-mix(in srgb, var(--teal) 12%, transparent)', border: '1px solid color-mix(in srgb, var(--teal) 35%, transparent)', color: 'var(--teal)' }}>
+              🏛️ See the Governance policy that backs this plan →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -207,7 +216,7 @@ export default function ReformPage() {
             { value: '5', label: 'Reform Phases' },
             { value: '26', label: 'Specific Actions' },
             { value: '100', label: 'Days to Deliver' },
-            { value: '0', label: 'Corporate Donors' },
+            { value: '24hr', label: 'Donor Disclosure' },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-4xl font-black" style={{ color: 'var(--gold)' }}>{stat.value}</div>

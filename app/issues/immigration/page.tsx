@@ -314,6 +314,15 @@ export default function ImmigrationPage() {
                   <strong>Citizens Party Position:</strong> Maintain and expand the military service path. Those who defend the country earn citizenship.
                 </div>
               </div>
+              <div className="p-6 rounded-2xl" style={{ background: 'var(--card)', border: '1px solid color-mix(in srgb, var(--teal) 30%, transparent)' }}>
+                <h3 className="font-bold mb-3" style={{ color: 'var(--teal)' }}>Dual Citizenship + Federal Service</h3>
+                <p className="text-sm mb-3" style={{ color: 'var(--muted)' }}>
+                  Dual citizenship is legal in the US under Afroyim v. Rusk (1967). Naturalized citizens already must renounce foreign passports within 2 years under our Pillar 4 reform. We extend the principle — narrowly — to people exercising federal power or influencing federal elections.
+                </p>
+                <div className="p-3 rounded-xl text-sm" style={{ background: 'color-mix(in srgb, var(--teal) 8%, transparent)', border: '1px solid color-mix(in srgb, var(--teal) 25%, transparent)', color: 'var(--teal)' }}>
+                  <strong>Citizens Party Position:</strong> You can hold dual citizenship as a private American. But federal candidates, federal officeholders, federal employees with security clearance, and political donors above $10K per cycle must hold only US citizenship. Pick: politics or two passports. Detailed mechanism on <Link href="/issues/lobbying-ban" className="underline">Lobbying Ban</Link>.
+                </div>
+              </div>
             </div>
           </div>
         </section>
