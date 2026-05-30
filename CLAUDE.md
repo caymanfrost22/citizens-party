@@ -12,28 +12,38 @@ Rank-first path. Build one pillar at a time. Hub page + sub-issue pages + Supaba
 Hub: `/issues/economy`. 8 sub-issues, all shipped as deep-dive pages:
 - `/issues/taxes` · `/issues/debt-spending` · `/issues/healthcare-costs` · `/issues/housing` · `/issues/inflation` · `/issues/big-tech` · `/issues/trade` · `/issues/wages-jobs`
 
-### 🏛️ Governance (DONE)
-Hub: `/issues/governance`. 6 sub-issues, all shipped:
-- `/issues/term-limits` · `/issues/campaign-finance` · `/issues/voting-reform` · `/issues/lobbying-ban` · `/issues/bureaucracy-reform` · `/issues/sunset-clauses`
+### 🏛️ Governance (DONE — merged to main PR #4 on 2026-05-29)
+Hub: `/issues/governance`. 6 sub-issues, all shipped + locked via full deep-dive walkthrough with explicit user picks per dimension:
+- `/issues/term-limits` — 12yr House (6 terms) + 12yr Senate (2 terms) separate clocks, SCOTUS lifetime + age-80 mandatory retirement, presidency stays 8, Article V + Citizens Party self-pledge
+- `/issues/campaign-finance` — 9 mechanisms. Statutory corp PAC ban, $10K individual cap indexed, force SuperPACs to $5K/donor, DISCLOSE Act, $200 democracy vouchers funded by lobbying surcharge, 24hr disclosure, coordination ban with criminal teeth, 28th Amendment campaign, lead-by-example pre-compliance
+- `/issues/voting-reform` — 13 mechanisms in 3 sections. RCV all federal, 7-day early voting, no-excuse mail + signature/ID verify, federal holiday + paid PTO, auto-reg at 18 + same-day backup, federal photo ID replacing state DL with biometric opt-in, back-end SSA + USCIS verify at registration AND ID issuance, paper trail + risk-limiting audits, algorithmic redistricting, felons restored post-supervision, internet voting overseas military only, Elections Clause federal floor. 7-point civil liberties guardrails + voter-test sidebar
+- `/issues/lobbying-ban` — 9 mechanisms. Lifetime ban on ex-members, 5yr senior cool-off w/ shadow lobbying captured, congressional stock trading ban, 24hr contact log, close FARA gap (AIPAC + Saudi + Qatar + Russia + China + Taiwan + UK universal rule), ban FARA-org PACs/SuperPACs, felony FARA + mandatory Special Counsel for repeat violators, single citizenship for federal office/clearance/$10K+ donors (Afroyim v. Rusk-compliant), FARA public dashboard
+- `/issues/bureaucracy-reform` — 11 mechanisms. Mandatory GAO impl 18mo + 2% budget cut, review-driven program consolidation (no quota), results budgeting (miss 3yr 10% cut, miss 5yr zero), 10yr agency sunset, E-all contract rebuild (commercial-first + OTA to all agencies $500M cap + pre-qualified vendor pools 30-day mini-bids + prize-model + outcome contracts + performance bonds >$50M + 5yr contract sunset + single-source ≤$25M with IG review + GAO protest reform), 90-day perf termination + FY2019 workforce cap + pay-for-performance, unified IG network statutory independence, cost-benefit + 10yr sunset on every new reg + Major Questions Doctrine codified, real-time spending dashboard + AI anomaly flagging, per-agency workforce caps voted each sunset cycle, case-by-case devolution
+- `/issues/sunset-clauses` — 13 mechanisms. 10yr default sunset on every law + agency + reg, variable cycles allowed only with explicit clause and recorded vote, narrow carve-outs (Bill of Rights + civil rights ratchet + entitlement benefits), standalone votes default + tightly-related bundles allowed with single-member veto, 10yr staggered phase-in, mandatory public hearing + GAO + IG report 12mo prior + AI-summarized citizen comment into record, hard sunset on failure (no continuing resolutions), treaties stay Article II but mandatory 10yr review terminable by floor vote, no automatic state revival on preemption sunset, statutory Sunset Act now + Article V constitutional amendment in parallel
 
 Pairs with `/reform` (100-day execution timeline) — cross-linked both directions.
+
+**Methodology established during this pillar (use for all future pillars):** For each sub-issue — (1) present Democrat and Republican positions with both rhetoric and behavior, (2) lay out the full policy option space across every relevant dimension with tradeoffs, (3) give recommended picks, (4) user picks per dimension, (5) rewrite the page + update Supabase platform_positions row + update hub one-liner. Never select stances autonomously.
 
 ### 🛡️ Immigration (DONE, standalone deep-dive)
 `/issues/immigration` — pre-dates the pillar pattern. Lives in Social pillar conceptually but ships as a single rich page.
 
 ## Active queue
 
-### 🤝 Social (NEXT after Governance — partially seeded by Immigration)
-Master sub-issue list (revisit when starting):
-| # | Sub-issue | Status |
-|---|-----------|--------|
-| 1 | Immigration | done (`/issues/immigration`) |
-| 2 | Education (K-12, college debt, school choice) | not started |
-| 3 | Crime & criminal justice | not started |
-| 4 | Drug policy (fentanyl, cannabis) | not started |
-| 5 | Abortion | not started — sensitive framing required |
-| 6 | Second Amendment / guns | not started — sensitive framing required |
-| 7 | Healthcare access (Medicare, single-payer) | not started |
+### 🤝 Social (NEXT — pick up here tomorrow)
+Master sub-issue list. Suggested walkthrough order: easy-to-hard, save the two sensitive ones for last when the frame is locked.
+
+| Order | Sub-issue | Status | Notes |
+|---|-----------|--------|---|
+| done | Immigration | `/issues/immigration` shipped | pre-pillar, standalone. Already cross-links to lobbying-ban single-citizenship rule |
+| **1 (NEXT)** | Education (K-12, college debt, school choice) | not started | mid sensitivity |
+| 2 | Crime & criminal justice | not started | mid sensitivity |
+| 3 | Drug policy (fentanyl, cannabis) | not started | mid sensitivity |
+| 4 | Healthcare access (Medicare, single-payer) | not started | mid sensitivity — distinct from `/issues/healthcare-costs` (Econ pillar) |
+| 5 | Second Amendment / guns | not started | **HIGH sensitivity — careful framing required** |
+| 6 | Abortion | not started | **HIGH sensitivity — careful framing required** |
+
+**Resume protocol:** start tomorrow with Education sub-issue. Follow the methodology established in Governance pillar — present D/R positions + rhetoric vs. behavior, lay out full option space across every dimension, give recommended picks, wait for user picks per dimension, then write page + DB row + hub one-liner.
 
 ### 🌍 Foreign
 Master sub-issue list:
