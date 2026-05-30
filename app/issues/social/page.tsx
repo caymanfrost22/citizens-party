@@ -47,6 +47,12 @@ const THREADS = [
     description: 'Open enrollment and charters inside the public system give families real options — while private schools and homeschooling stay fully legal but fully self-funded. Public dollars stay in public schools, lifting the system every child is entitled to instead of draining it.',
     appliesTo: ['Education'],
   },
+  {
+    icon: '🇺🇸',
+    title: 'Shared identity and honest heritage',
+    description: 'The Pledge of Allegiance every morning (opt-out preserved per Barnette), the founding\'s Judeo-Christian heritage taught as history not doctrine, and fairness in girls\' sports decided on a sex-based standard. A diverse country still needs a shared civic identity — restored honestly, within the Constitution, not weaponized as a culture war.',
+    appliesTo: ['Education'],
+  },
 ] as const
 
 export default function SocialPillarPage() {

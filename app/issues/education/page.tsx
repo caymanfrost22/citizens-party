@@ -88,6 +88,31 @@ const MECHANISMS = [
     title: 'Safe Schools — Security, Counselors, and Clear Discipline',
     body: 'Three layers, scaled to each school\'s actual need. (a) Security appropriate to the area and threat level — not a one-size mandate, but no school left defenseless. (b) Counselors in every school for both mental health and academic / career guidance — the support kids are missing today. (c) Principals get real authority to maintain order, bounded by strict, published enforcement guidelines and due process so discipline is firm, fair, and never arbitrary. Order and support are not opposites; kids need both to learn.',
   },
+  {
+    num: '17',
+    title: 'The Whole Child — Art, Music, PE, and Recess',
+    body: 'Art, music, and physical education are restored as core parts of the school day — not the first things cut when budgets tighten — and every young child gets daily recess. This is not fluff: movement, play, and the arts are how young brains build focus, creativity, coordination, and emotional regulation. The research is overwhelming, especially in early childhood. A kid who paints, plays an instrument, runs at recess, and moves in gym class learns the academic subjects better, not worse.',
+  },
+  {
+    num: '18',
+    title: 'Free College for Military Service',
+    body: 'Expanded free public-college tuition for those who serve in the military — usable either way. Commit before college and serve after, or serve first and have your public-university tuition covered after. A major expansion of the GI Bill / ROTC model. Service to the country earns a funded future. Pairs with the funded trade-school path (mechanism 9): whether you serve, learn a trade, or attend an affordable public university, there is an honorable, fully funded road forward out of high school.',
+  },
+  {
+    num: '19',
+    title: 'Fairness in Girls\' Sports — Eligibility by Sex',
+    body: 'Girls\' sports are for girls and boys\' sports are for boys — athletic eligibility is set by sex, to protect the competitive opportunity, scholarships, and physical safety that Title IX created for female athletes. Schools recognize two sexes. Students under 18 are treated according to their sex in the school setting; questions of adult identity are left to adulthood, not managed by schools for minors. The principle is narrow and concrete: a level playing field for girls, decided on fairness and safety rather than on the culture war either party wants to fight.',
+  },
+  {
+    num: '20',
+    title: 'The Pledge of Allegiance, Every Morning',
+    body: 'Every school opens the day with the Pledge of Allegiance, in every classroom, K-12, paired with civics that teaches why — restoring the shared patriotism that holds a diverse country together. Consistent with West Virginia v. Barnette (1943), no individual child is forced to speak the words against their conscience; the opt-out the Constitution requires is preserved. But the ritual itself is universal and daily: the flag is up, the pledge is said, and students learn what it means to belong to a self-governing republic.',
+  },
+  {
+    num: '21',
+    title: 'Teach America\'s Founding Heritage Honestly',
+    body: 'Students should understand the Judeo-Christian moral and philosophical foundations the American founding drew on — natural rights, the dignity of the individual, equality before the law, the source the founders themselves cited for "endowed by their Creator." This is taught as history and civic heritage, not as doctrine or worship: public schools teach about the role religion played in shaping the nation, which the Supreme Court has repeatedly affirmed is constitutional, while never endorsing or instructing any faith. Citizens cannot understand their own country — its Declaration, its laws, its moral vocabulary — without understanding the heritage those ideas came from.',
+  },
 ] as const
 
 export default function EducationPage() {
@@ -104,7 +129,7 @@ export default function EducationPage() {
         <ThreeWayCompare
           dem="Fully fund public schools, cancel student debt, universal pre-K. In practice: bow to NEA/AFT (top donors, $40M+/cycle), block accountability tied to outcomes, defend test-driven Common Core. Biden canceled $189B in debt by executive action — tuition kept rising, the cause untouched."
           rep="Parent rights, school choice, abolish the Department of Education, college 'isn't for everyone.' In practice: vouchers that mostly subsidize already-private families, underfund the rural public schools their own voters use, culture-war book fights over actual curriculum quality, no real plan for college cost."
-          us="Empower the Department of Education to set a modernized national curriculum — personal finance, home ec, shop/trades, real history, tech in every class. Pool school funding statewide + federal floor + a national education lottery to end zip-code apartheid. Living-wage teacher pay on multi-metric performance, renewable contracts. Fund trade schools as a first-class path. Affordable, lean public universities — no DEI/identity bloat. Private universities fully independent and self-funded. Cap loans at $40K / 4%, refinance existing debt, no bailout. Publish every degree's real outcomes. Open enrollment + charters; private and home self-funded. Security, counselors, and clear discipline in every school."
+          us="Empower the Department of Education to set a modernized national curriculum — personal finance, home ec, shop/trades, real history, tech in every class. Pool school funding statewide + federal floor + a national education lottery to end zip-code apartheid. Living-wage teacher pay on multi-metric performance, renewable contracts. Fund trade schools as a first-class path. Affordable, lean public universities — no DEI/identity bloat. Private universities fully independent and self-funded. Cap loans at $40K / 4%, refinance existing debt, no bailout. Publish every degree's real outcomes. Open enrollment + charters; private and home self-funded. Security, counselors, and clear discipline in every school. Art, music, PE, and recess restored. Free college for military service. Fairness in girls' sports — eligibility by sex. The Pledge every morning. Teach the founding's Judeo-Christian heritage honestly — as history, not doctrine."
         />
       </section>
 
@@ -128,8 +153,8 @@ export default function EducationPage() {
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-10">
           <SectionLabel color="var(--green)" bg="color-mix(in srgb, var(--green) 10%, transparent)" border="color-mix(in srgb, var(--green) 30%, transparent)">🛠️ Our Plan</SectionLabel>
-          <h2 className="text-3xl font-black">Sixteen Mechanisms</h2>
-          <p className="text-[var(--muted)] mt-2">From kindergarten curriculum to the last student loan payment. One coherent design.</p>
+          <h2 className="text-3xl font-black">Twenty-One Mechanisms</h2>
+          <p className="text-[var(--muted)] mt-2">From kindergarten recess to the last student loan payment. One coherent design.</p>
         </div>
         <div className="space-y-5">
           {MECHANISMS.map(m => (
