@@ -31,20 +31,22 @@ Pairs with `/reform` (100-day execution timeline) — cross-linked both directio
 
 ## Active queue
 
-### 🤝 Social (NEXT — pick up here tomorrow)
-Master sub-issue list. Suggested walkthrough order: easy-to-hard, save the two sensitive ones for last when the frame is locked.
+### 🤝 Social (IN PROGRESS — hub shipped, Education shipped)
+Hub: `/issues/social` (PR #7, 2026-05-30). Pillar color `var(--green)`. Hub shows shipped sub-issues + "In Development" chips for queued ones. Suggested walkthrough order: easy-to-hard, save the two sensitive ones for last when the frame is locked.
 
 | Order | Sub-issue | Status | Notes |
 |---|-----------|--------|---|
 | done | Immigration | `/issues/immigration` shipped | pre-pillar, standalone. Already cross-links to lobbying-ban single-citizenship rule |
-| **1 (NEXT)** | Education (K-12, college debt, school choice) | not started | mid sensitivity |
-| 2 | Crime & criminal justice | not started | mid sensitivity |
+| done | Education | `/issues/education` shipped (PR #7) | 16 mechanisms — locked stack below |
+| **2 (NEXT)** | Crime & criminal justice | not started | mid sensitivity |
 | 3 | Drug policy (fentanyl, cannabis) | not started | mid sensitivity |
-| 4 | Healthcare access (Medicare, single-payer) | not started | mid sensitivity — distinct from `/issues/healthcare-costs` (Econ pillar) |
+| 4 | Healthcare access (Medicare, single-payer) | not started | mid sensitivity — distinct from `/issues/healthcare-costs` (Econ pillar). Note: a `Healthcare` social row already exists in `platform_positions` (priority 9) |
 | 5 | Second Amendment / guns | not started | **HIGH sensitivity — careful framing required** |
 | 6 | Abortion | not started | **HIGH sensitivity — careful framing required** |
 
-**Resume protocol:** start tomorrow with Education sub-issue. Follow the methodology established in Governance pillar — present D/R positions + rhetoric vs. behavior, lay out full option space across every dimension, give recommended picks, wait for user picks per dimension, then write page + DB row + hub one-liner.
+**🎓 Education (DONE — PR #7, 2026-05-30):** 16 mechanisms. Empower Dept of Education to set a modern national curriculum + requirements (states own delivery); modernized core (personal finance/econ + home ec + shop/trades alongside reading/math/science/history/civics); tech embedded in every class; real history via nonpartisan historian commission + primary-source mandate; end zip-code apartheid — school funding off local property tax onto statewide pooled property tax distributed equally per student + federal per-student floor; national education lottery (ringfenced); living-wage teacher pay floor + multi-metric performance incentives (attendance/participation/growth/peer/admin, never test scores alone); renewable multi-year contracts replace lifetime tenure; funded trade/vocational schools as first-class path; affordable public universities with caps on enrollment + admin headcount, no federal $ for DEI/race/sex/religion-organized programs; private universities fully independent (zero federal funds, self-funded students); hard-capped federal loans ($40K lifetime / 4% rate); existing debt fixed without bailout (refi to 4% + 10%-of-discretionary-income repayment cap, no cancellation); every degree publishes employment + earnings-vs-debt by major; school choice within public (open enrollment + charters), private/home self-funded; safe schools (scaled security + mental-health & guidance counselors + bounded principal discipline authority). Catchphrase: "Invest in the future, don't profit off it."
+
+**Resume protocol:** next is Crime & criminal justice. Follow the methodology established in Governance pillar (see canonical section at bottom) — present D/R positions + rhetoric vs. behavior, lay out full option space across every dimension, give recommended picks, wait for user picks per dimension, then write page + DB row + hub one-liner. When adding a sub-issue to the Social hub, move it from the `UPCOMING` chips array into `SUB_ISSUES` in `app/issues/social/page.tsx`.
 
 ### 🌍 Foreign
 Master sub-issue list:
