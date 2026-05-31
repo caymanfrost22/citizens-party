@@ -30,10 +30,15 @@ const SUB_ISSUES = [
     oneLiner: 'Critical care for all, comprehensive care you earn. A funded universal critical-care floor (no one dies in the street — replaces the dishonest EMTALA cost-shift we already pay), comprehensive coverage earned by contributing through an employer or directly. Graduated per-head employer contribution into a portable pool + individual buy-in + redirecting money we already spend. Kill the cost-shift, regulate captive-market prices, cover root-cause + evidence-backed alternative medicine, fix rural/access deserts. Keep Medicare, fold Medicaid into the floor. Not single-payer, not a handout.',
     href: '/issues/healthcare-access',
   },
+  {
+    icon: '🔫',
+    title: 'Second Amendment',
+    oneLiner: 'The right is settled — affirm the individual right (Heller, Bruen). Fix the background-check system + extend to all sales, but as a check, never a registry. No cosmetic "assault weapon" bans or magazine limits — they are theater. Due-process-first red-flag removal. Center the suicide majority (55% of gun deaths) with safe storage + veteran focus. National concealed-carry reciprocity. Keep + enforce prohibited-person rules with a restoration path for nonviolent felons. Harden schools + fix the response failures. Fund mental health — the actual problem. Criminal-supply enforcement lives on the Crime plan.',
+    href: '/issues/second-amendment',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '🔫', label: 'Second Amendment' },
   { icon: '🤰', label: 'Abortion' },
 ] as const
 
@@ -91,6 +96,12 @@ const THREADS = [
     title: 'A floor for everyone, not a free ride',
     description: 'Healthcare splits the difference both parties refuse to: a funded critical-care floor so no one dies for lack of care, comprehensive coverage earned by paying in. Mental-health and addiction parity ties the coverage system to the treatment courts and recovery programs across the platform — the same coverage that treats diabetes treats depression and addiction.',
     appliesTo: ['Healthcare Access', 'Drug Policy', 'Crime & Criminal Justice'],
+  },
+  {
+    icon: '🎯',
+    title: 'Target the dangerous person, not the law-abiding owner',
+    description: 'On guns we restrict the genuinely dangerous — criminals and the dangerously ill — with real due process, and leave law-abiding owners alone: no bans by weapon type, checks that verify the buyer without building a registry. The same person-not-object logic runs through the platform — pursue the trafficker, treat the illness, and put the money where the deaths (mostly suicides) actually are.',
+    appliesTo: ['Second Amendment', 'Crime & Criminal Justice', 'Healthcare Access'],
   },
 ] as const
 

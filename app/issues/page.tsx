@@ -49,6 +49,11 @@ const issueRoutes: Record<string, string> = {
   'Health Coverage': '/issues/healthcare-access',
   'Single-Payer': '/issues/healthcare-access',
   'Medicare': '/issues/healthcare-access',
+  'Second Amendment': '/issues/second-amendment',
+  'Guns': '/issues/second-amendment',
+  'Gun Rights': '/issues/second-amendment',
+  'Gun Control': '/issues/second-amendment',
+  '2A': '/issues/second-amendment',
 }
 
 export default async function IssuesPage() {
