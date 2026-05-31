@@ -20,10 +20,15 @@ const SUB_ISSUES = [
     oneLiner: 'Apply the doctrine to the wars we\'re actually in. Ukraine to a negotiated settlement structured as accountable lend-lease — not unconditional victory, not abandonment. Israel as the ally it is: defensive aid unconditional, offensive aid held to the civilian-protection standards existing US law already requires. Gaza: hostage deal + sustainable ceasefire + Abraham Accords expansion tied to a real Palestinian track, no US troops. Iran without nuclear weapons through diplomacy + trade integration, not thirty more years of sanctions that never worked. Proxy network: defensive force protection only + withdraw US forces from range. Article I restored. Every aid package standalone, sunsetted, audited. Humanitarian separated from military. State Department rebuilt. No US-funded reconstruction unless host pays or US benefits. Taiwan: strategic ambiguity stays, costs split honestly. AFRICOM: same bases test, consolidate the rest.',
     href: '/issues/foreign-wars',
   },
+  {
+    icon: '🇨🇳',
+    title: 'China Policy',
+    oneLiner: 'Out-build them at home. Out-compete them abroad. Out-last them in time. Strategic competition + structured coexistence — no new Cold War, no capitulation. Targeted tariffs where they buy something + sector-by-sector reciprocity elsewhere. Small yard, high fence on leading-edge tech + active onshore build of the strategic stack so we depend less. The dollar reserve is treated as a national-security interest — organized dedollarization is economic warfare. Data sovereignty law applied to every foreign-adversary app equally, not TikTok singled out. Compete in markets against Belt-and-Road via the US Development Finance Corporation, not sanctions on third countries. Keep cooperation tracks open on climate, pandemics, AI safety. Smart counterintelligence, not ethnic profiling. Foreign students welcome on private money — no federal aid for non-citizens, no displacement of Americans from subsidized seats. Pacific alliances strengthened on pay-to-play terms. Long-arc door open on conditions. Rivals today. Not enemies forever.',
+    href: '/issues/china-policy',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '🇨🇳', title: 'China Policy', note: 'Strategic competition without forever war. Hard onshore critical supply, technology export controls on dual-use, hold Taiwan deterrence within mutual-defense limits, open door to alliance expansion long-term.' },
   { icon: '🤝', title: 'NATO & Alliances', note: 'Pay-to-play formalized — 2% hard floor or out. Mutual-defense only. Expand to former adversaries on conditions. Renegotiate Status of Forces agreements to host-pays-or-strategic-use standard.' },
 ] as const
 
@@ -82,6 +87,18 @@ const THREADS = [
     description: 'Same logic our Military Posture page applies to bases — strategic use, host-paid, or close — applied to dollars. The United States does not fund reconstruction abroad unless the host pays a meaningful share or there is a clear US strategic benefit. Humanitarian aid (keeping civilians alive in a war) is separate and continues; nation-building after one is not the same instrument and is not our bill.',
     appliesTo: ['Ukraine / Israel / Foreign Wars'],
   },
+  {
+    icon: '🏗️',
+    title: 'Build our own. Out-last them in time.',
+    description: 'Export controls buy time. Independence comes from building. We accelerate semiconductor fabs at home and across Chip 4 partners, rebuild rare-earth processing, onshore advanced batteries and grid-scale storage, restore shipbuilding, rebuild domestic pharmaceutical active ingredients. The fix for dependency on a rival is the same fix our Military Posture and Economics pillars detail — build, don\'t complain.',
+    appliesTo: ['China Policy', 'Military Posture & Defense Doctrine'],
+  },
+  {
+    icon: '💵',
+    title: 'The dollar is the homeland',
+    description: 'Strategic coexistence has one hard limit — organized efforts to displace the dollar as world reserve currency are treated as an economic security threat, on par with a kinetic threat to critical infrastructure. The deepest defense is US fiscal honesty (debt-spending pillar), paired with restrained SWIFT use, a regulated digital-dollar framework, and active countermeasures against coordinated dedollarization campaigns.',
+    appliesTo: ['China Policy'],
+  },
 ] as const
 
 export default function ForeignPillarPage() {
@@ -91,7 +108,7 @@ export default function ForeignPillarPage() {
         badge="🌍 Foreign Pillar"
         badgeColor={FOREIGN}
         title={<>Strong Enough That <span style={{ color: FOREIGN }}>No One Tries.</span></>}
-        subtitle="Peace through strength — and strength through honest alliances. Allies pay their share. We defend, we don't attack. We never start wars, and we don't join other nations' wars without an Article I declaration. No permanent enemies — alliances keep the peace. Modernized deterrent, onshore critical supply, restored GI Bill. Two sub-issues shipped: the doctrine and its application to the wars we are actually in."
+        subtitle="Peace through strength — and strength through honest alliances. Allies pay their share. We defend, we don't attack. We never start wars, and we don't join other nations' wars without an Article I declaration. No permanent enemies — alliances keep the peace. Modernized deterrent, onshore critical supply, restored GI Bill. Three sub-issues shipped: the doctrine, the active wars, and the long-arc China relationship that defines the next fifty years."
       />
 
       <SignaturePrinciple />
@@ -129,7 +146,7 @@ function SubIssuesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-black mb-3">Shipped Sub-Issues</h2>
-          <p className="text-[var(--muted)]">Two shipped. Two queued.</p>
+          <p className="text-[var(--muted)]">Three shipped. One queued.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SUB_ISSUES.map(s => (

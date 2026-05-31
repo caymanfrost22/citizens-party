@@ -82,6 +82,18 @@ const issueRoutes: Record<string, string> = {
   'Russia-Ukraine': '/issues/foreign-wars',
   'Houthis': '/issues/foreign-wars',
   'Hezbollah': '/issues/foreign-wars',
+  'China': '/issues/china-policy',
+  'China Policy': '/issues/china-policy',
+  'TikTok': '/issues/china-policy',
+  'Tariffs': '/issues/china-policy',
+  'Belt and Road': '/issues/china-policy',
+  'BRI': '/issues/china-policy',
+  'CHIPS Act': '/issues/china-policy',
+  'Export Controls': '/issues/china-policy',
+  'AUKUS': '/issues/china-policy',
+  'Quad': '/issues/china-policy',
+  'Reserve Currency': '/issues/china-policy',
+  'Dollar': '/issues/china-policy',
 }
 
 export default async function IssuesPage() {

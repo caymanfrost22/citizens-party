@@ -59,7 +59,7 @@ const PILLARS: Pillar[] = [
     title: 'Foreign',
     color: '#7b2d8b',
     catchphrase: 'Strong enough that no one tries. Honest enough that no one pays for wars they didn\'t pick.',
-    subtitle: 'In progress. Two shipped: Military Posture & Defense Doctrine, and Ukraine/Israel/Foreign Wars — applying the doctrine to active conflicts. Two queued: China policy, NATO + alliances.',
+    subtitle: 'In progress. Three shipped: Military Posture & Defense Doctrine, Ukraine/Israel/Foreign Wars, and China Policy — the long-arc relationship that defines the next fifty years. One queued: NATO + alliances.',
     status: 'in_progress',
     subIssueCount: 4,
     href: '/issues/foreign',
@@ -171,6 +171,18 @@ const CATCHPHRASES: Catchphrase[] = [
   {
     text: 'Defensive aid yes. Blank checks no.',
     context: 'Ukraine to a negotiated settlement structured as accountable lend-lease. Israel ally + Iron Dome unconditional, offensive aid conditioned on the civilian-protection standards existing US law already requires. Iran without nuclear weapons through diplomacy + trade integration — the instrument that has actually worked on non-proliferation. Every aid package standalone, sunsetted, audited. The US does not fund reconstruction unless we benefit or the host pays.',
+    pillar: 'Foreign',
+    color: '#7b2d8b',
+  },
+  {
+    text: 'Out-build them at home. Out-compete them abroad. Out-last them in time.',
+    context: 'China policy without a new Cold War. Targeted strategic tariffs + sector-by-sector reciprocity. Small yard, high fence on leading-edge tech + active onshore build of the strategic stack. Data sovereignty applied to every foreign-adversary app equally. Compete in markets, not sanctions on third countries. Climate, pandemics, AI safety stay open. Smart counterintelligence, not ethnic profiling. Foreign students welcome on private money, never displacing Americans from subsidized seats. Rivals today. Not enemies forever.',
+    pillar: 'Foreign',
+    color: '#7b2d8b',
+  },
+  {
+    text: 'The dollar is the homeland.',
+    context: 'Coordinated dedollarization is treated as an economic security threat, on par with a kinetic threat to critical infrastructure. The deepest defense is US fiscal honesty (debt-spending pillar) — restrained SWIFT use, a regulated digital-dollar framework, and active countermeasures against organized campaigns to displace the dollar as world reserve currency.',
     pillar: 'Foreign',
     color: '#7b2d8b',
   },
