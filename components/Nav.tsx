@@ -12,6 +12,7 @@ const links = [
   { href: '/issues/governance', label: '🏛️ Governance' },
   { href: '/issues/social', label: '🤝 Social' },
   { href: '/issues/foreign', label: '🌍 Foreign' },
+  { href: '/issues/environment', label: '🌿 Environment' },
   { href: '/issues/immigration', label: '🛡️ Immigration' },
   { href: '/reform', label: 'Reform Plan' },
   { href: '/join', label: 'Join Us' },

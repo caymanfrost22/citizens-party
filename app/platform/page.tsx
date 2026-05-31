@@ -68,11 +68,11 @@ const PILLARS: Pillar[] = [
     icon: '🌿',
     title: 'Environment',
     color: '#52b788',
-    catchphrase: 'Energy abundance. Clean accounting. Real stewardship.',
-    subtitle: 'Planned. Sub-issues queued: climate + emissions, energy policy (oil/gas/nuclear/renewables), public lands + environmental regulation.',
-    status: 'planned',
+    catchphrase: 'Energy abundance. Honest accounting. American grid.',
+    subtitle: 'In progress. Energy Policy shipped — build everything that works, 12-month permitting cap, interstate grid, sunset the subsidies, big tech builds its own power. Two queued: climate/emissions accounting, public lands + environmental regulation.',
+    status: 'in_progress',
     subIssueCount: 3,
-    href: null,
+    href: '/issues/environment',
   },
 ]
 
@@ -197,6 +197,18 @@ const CATCHPHRASES: Catchphrase[] = [
     context: 'The deepest version of "no permanent enemies." The alliance is open. Any country that meets the published rules — defense floor, mutual-defense-only doctrine, cost-share priced to capability, defined exit clause, rule-of-law markers — is eligible, regardless of identity or history. Russia, China, Iran, Saudi, India, every state is evaluated against the same standard.',
     pillar: 'Foreign',
     color: '#7b2d8b',
+  },
+  {
+    text: 'Energy abundance. Honest accounting. American grid.',
+    context: 'Build everything that works. Nuclear at scale + gas as bridge + domestic oil + coal exiting on market terms + renewables competing on price + geothermal and fusion seriously funded. 12-month permitting cap on every source. Interstate transmission with FERC primacy. EV mandate repealed. Strategic reserves refilled. Technology-neutral sunset-based subsidies. Moonshot research funded, including the wireless-power-transmission long tail Tesla never got to finish.',
+    pillar: 'Environment',
+    color: '#52b788',
+  },
+  {
+    text: 'Big tech builds the power it uses.',
+    context: 'Data centers are the fastest-growing source of US electricity demand. Above a threshold, every new or expanded data center must either co-locate with dedicated generation it pays for in full, or sign long-term contracts at full long-run marginal cost. No socializing AI training load onto residential ratepayers. Microsoft restarting Three Mile Island is the proof case.',
+    pillar: 'Environment',
+    color: '#52b788',
   },
 ]
 
