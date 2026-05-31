@@ -24,10 +24,15 @@ const SUB_ISSUES = [
     oneLiner: 'Draw the line by acute lethality. Legalize + regulate the safe-to-dose tier (cannabis, cocaine, LSD, psilocybin, MDMA, mescaline) like alcohol — licensed, 21+, purity-tested, taxed. The crime becomes unlicensed sale. Tax the legal market to fund on-demand treatment + recovery. Keep fentanyl, heroin, meth illegal — multi-front supply war + fatal-dose dealer liability. Users get mandatory treatment, not prison. Narcan as a bridge, no injection sites. Prescription opioids stay controlled medicine. Honest, limited cannabis-justice relief. Voluntary intoxication is an aggravating factor, never an excuse.',
     href: '/issues/drug-policy',
   },
+  {
+    icon: '🏥',
+    title: 'Healthcare Access',
+    oneLiner: 'Critical care for all, comprehensive care you earn. A funded universal critical-care floor (no one dies in the street — replaces the dishonest EMTALA cost-shift we already pay), comprehensive coverage earned by contributing through an employer or directly. Graduated per-head employer contribution into a portable pool + individual buy-in + redirecting money we already spend. Kill the cost-shift, regulate captive-market prices, cover root-cause + evidence-backed alternative medicine, fix rural/access deserts. Keep Medicare, fold Medicaid into the floor. Not single-payer, not a handout.',
+    href: '/issues/healthcare-access',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '🏥', label: 'Healthcare Access' },
   { icon: '🔫', label: 'Second Amendment' },
   { icon: '🤰', label: 'Abortion' },
 ] as const
@@ -80,6 +85,12 @@ const THREADS = [
     title: 'Honesty over slogans, responsibility over excuses',
     description: 'Drug policy drawn by lethality instead of culture-war reflex — regulate what can be dosed safely, hunt what kills by accident, and tax the legal market to fund treatment. Paired with hard personal responsibility: voluntary intoxication is an aggravating factor, never a defense. Freedom and accountability arrive together.',
     appliesTo: ['Drug Policy', 'Crime & Criminal Justice'],
+  },
+  {
+    icon: '🤲',
+    title: 'A floor for everyone, not a free ride',
+    description: 'Healthcare splits the difference both parties refuse to: a funded critical-care floor so no one dies for lack of care, comprehensive coverage earned by paying in. Mental-health and addiction parity ties the coverage system to the treatment courts and recovery programs across the platform — the same coverage that treats diabetes treats depression and addiction.',
+    appliesTo: ['Healthcare Access', 'Drug Policy', 'Crime & Criminal Justice'],
   },
 ] as const
 

@@ -44,6 +44,11 @@ const issueRoutes: Record<string, string> = {
   'Fentanyl': '/issues/drug-policy',
   'Cannabis': '/issues/drug-policy',
   'Marijuana': '/issues/drug-policy',
+  'Healthcare Access': '/issues/healthcare-access',
+  'Healthcare': '/issues/healthcare-access',
+  'Health Coverage': '/issues/healthcare-access',
+  'Single-Payer': '/issues/healthcare-access',
+  'Medicare': '/issues/healthcare-access',
 }
 
 export default async function IssuesPage() {
