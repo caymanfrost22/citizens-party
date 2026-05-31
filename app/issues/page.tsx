@@ -39,6 +39,11 @@ const issueRoutes: Record<string, string> = {
   'Criminal Justice': '/issues/crime',
   'Policing': '/issues/crime',
   'Public Safety': '/issues/crime',
+  'Drug Policy': '/issues/drug-policy',
+  'Drugs': '/issues/drug-policy',
+  'Fentanyl': '/issues/drug-policy',
+  'Cannabis': '/issues/drug-policy',
+  'Marijuana': '/issues/drug-policy',
 }
 
 export default async function IssuesPage() {
