@@ -63,8 +63,6 @@ const issueRoutes: Record<string, string> = {
   'Defense Doctrine': '/issues/military-posture',
   'Military Spending': '/issues/military-posture',
   'Pentagon Audit': '/issues/military-posture',
-  'NATO': '/issues/military-posture',
-  'Alliances': '/issues/military-posture',
   'War Powers': '/issues/military-posture',
   'AUMF': '/issues/military-posture',
   'Foreign Policy': '/issues/foreign',
@@ -94,6 +92,18 @@ const issueRoutes: Record<string, string> = {
   'Quad': '/issues/china-policy',
   'Reserve Currency': '/issues/china-policy',
   'Dollar': '/issues/china-policy',
+  'NATO': '/issues/nato-alliances',
+  'NATO & Alliances': '/issues/nato-alliances',
+  'Alliances': '/issues/nato-alliances',
+  'Treaty Reform': '/issues/nato-alliances',
+  'Status of Forces': '/issues/nato-alliances',
+  'SOFA': '/issues/nato-alliances',
+  'Five Eyes': '/issues/nato-alliances',
+  'UN': '/issues/nato-alliances',
+  'United Nations': '/issues/nato-alliances',
+  'WTO': '/issues/nato-alliances',
+  'IMF': '/issues/nato-alliances',
+  'World Bank': '/issues/nato-alliances',
 }
 
 export default async function IssuesPage() {

@@ -26,10 +26,12 @@ const SUB_ISSUES = [
     oneLiner: 'Out-build them at home. Out-compete them abroad. Out-last them in time. Strategic competition + structured coexistence — no new Cold War, no capitulation. Targeted tariffs where they buy something + sector-by-sector reciprocity elsewhere. Small yard, high fence on leading-edge tech + active onshore build of the strategic stack so we depend less. The dollar reserve is treated as a national-security interest — organized dedollarization is economic warfare. Data sovereignty law applied to every foreign-adversary app equally, not TikTok singled out. Compete in markets against Belt-and-Road via the US Development Finance Corporation, not sanctions on third countries. Keep cooperation tracks open on climate, pandemics, AI safety. Smart counterintelligence, not ethnic profiling. Foreign students welcome on private money — no federal aid for non-citizens, no displacement of Americans from subsidized seats. Pacific alliances strengthened on pay-to-play terms. Long-arc door open on conditions. Rivals today. Not enemies forever.',
     href: '/issues/china-policy',
   },
-] as const
-
-const UPCOMING = [
-  { icon: '🤝', title: 'NATO & Alliances', note: 'Pay-to-play formalized — 2% hard floor or out. Mutual-defense only. Expand to former adversaries on conditions. Renegotiate Status of Forces agreements to host-pays-or-strategic-use standard.' },
+  {
+    icon: '🤝',
+    title: 'NATO & Alliances',
+    oneLiner: 'Real allies. Real rules. Real exits. NATO reaffirmed and put on a 3% floor with tiered protection — pay more, get more. Miss the floor two years running, lose Article 5 until current. Concrete partner-status offer to Russia tied to a verified Ukraine settlement + New START successor + decade rule-of-law markers. Ukraine to armed neutrality + EU path + bilateral guarantees, NATO membership activates after settlement. Pacific bilaterals on the same pay-to-play rule. Quad, AUKUS, Chip 4 institutionalized beyond summits. Every SOFA over 20 years old renegotiated under bases doctrine with 10-year sunsets. Five Eyes preserved + limited China-track expansion. Rio Treaty + OAS reformed for cartels + migration + dedollarization defense. UN/WTO/IMF/World Bank: reform inside a 5-year window or pullout + new architecture on our rules. Mandatory 10-year sunset on every treaty + alliance commitment. New alliances require Article I approval + mutual-defense-only doctrine + cost-share floor + defined exit clause. Clean withdrawal procedure written into law. And the open alliance — any country that meets the published rules is eligible, regardless of identity or history. Everyone plays by the rules. Everyone wins.',
+    href: '/issues/nato-alliances',
+  },
 ] as const
 
 const THREADS = [
@@ -99,6 +101,18 @@ const THREADS = [
     description: 'Strategic coexistence has one hard limit — organized efforts to displace the dollar as world reserve currency are treated as an economic security threat, on par with a kinetic threat to critical infrastructure. The deepest defense is US fiscal honesty (debt-spending pillar), paired with restrained SWIFT use, a regulated digital-dollar framework, and active countermeasures against coordinated dedollarization campaigns.',
     appliesTo: ['China Policy'],
   },
+  {
+    icon: '🚪',
+    title: 'Everyone plays by the rules. Everyone wins.',
+    description: 'The deepest version of "no permanent enemies." The alliance is open. Any country that meets the published rules — 3% defense floor, mutual-defense-only doctrine, cost-share priced to capability, defined exit clause, rule-of-law markers — is eligible, regardless of identity or history. Russia, China, Iran, Saudi, India, every state is evaluated against the same standard. The rule replaces seventy-five years of implicit identity-based gatekeeping with a published rule any nation can read and decide for itself.',
+    appliesTo: ['NATO & Alliances'],
+  },
+  {
+    icon: '⏳',
+    title: 'No commitment runs forever on autopilot',
+    description: 'Every treaty, every alliance commitment, every Status of Forces Agreement on a mandatory 10-year review under the Sunset Clauses pillar. Reauthorize or expire. Forcing the question every generation, on the record, instead of letting a 1951 commitment run through 2051 because nobody ever called the vote. New alliances require Article I approval, mutual-defense-only doctrine, a cost-share floor, and a defined exit clause. A clean withdrawal procedure written into law replaces improvised withdrawal-by-tweet.',
+    appliesTo: ['NATO & Alliances', 'Military Posture & Defense Doctrine'],
+  },
 ] as const
 
 export default function ForeignPillarPage() {
@@ -108,12 +122,11 @@ export default function ForeignPillarPage() {
         badge="🌍 Foreign Pillar"
         badgeColor={FOREIGN}
         title={<>Strong Enough That <span style={{ color: FOREIGN }}>No One Tries.</span></>}
-        subtitle="Peace through strength — and strength through honest alliances. Allies pay their share. We defend, we don't attack. We never start wars, and we don't join other nations' wars without an Article I declaration. No permanent enemies — alliances keep the peace. Modernized deterrent, onshore critical supply, restored GI Bill. Three sub-issues shipped: the doctrine, the active wars, and the long-arc China relationship that defines the next fifty years."
+        subtitle="Peace through strength — and strength through honest alliances. Allies pay their share. We defend, we don't attack. We never start wars, and we don't join other nations' wars without an Article I declaration. No permanent enemies — alliances keep the peace. Modernized deterrent, onshore critical supply, restored GI Bill. Four sub-issues, all shipped: the doctrine, the active wars, the long-arc China relationship, and the full alliance architecture restructured for the next century."
       />
 
       <SignaturePrinciple />
       <SubIssuesGrid />
-      <UpcomingGrid />
       <CrossThreadsGrid />
       <PillarCTA />
     </div>
@@ -145,41 +158,12 @@ function SubIssuesGrid() {
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-black mb-3">Shipped Sub-Issues</h2>
-          <p className="text-[var(--muted)]">Three shipped. One queued.</p>
+          <h2 className="text-3xl font-black mb-3">The 4 Sub-Issues</h2>
+          <p className="text-[var(--muted)]">All shipped. Each links to the full plan.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SUB_ISSUES.map(s => (
             <SubIssueCard key={s.title} {...s} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function UpcomingGrid() {
-  return (
-    <section className="py-12 px-4" style={{ background: '#0d1f38' }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8">
-          <div className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3"
-            style={{ background: 'color-mix(in srgb, var(--gold) 10%, transparent)', border: '1px solid color-mix(in srgb, var(--gold) 30%, transparent)', color: 'var(--gold)' }}>
-            🚧 In Development
-          </div>
-          <h2 className="text-2xl md:text-3xl font-black mb-2">Queued Sub-Issues</h2>
-          <p className="text-[var(--muted)] text-sm">Coming next. The doctrine on the shipped page applies to each.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {UPCOMING.map(u => (
-            <div key={u.title} className="rounded-2xl p-5"
-              style={{ background: 'var(--card)', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">{u.icon}</span>
-                <h3 className="font-bold text-sm">{u.title}</h3>
-              </div>
-              <p className="text-xs" style={{ color: 'var(--muted)' }}>{u.note}</p>
-            </div>
           ))}
         </div>
       </div>
