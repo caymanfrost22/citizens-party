@@ -36,10 +36,12 @@ const SUB_ISSUES = [
     oneLiner: 'The right is settled — affirm the individual right (Heller, Bruen). Fix the background-check system + extend to all sales, but as a check, never a registry. No cosmetic "assault weapon" bans or magazine limits — they are theater. Due-process-first red-flag removal. Center the suicide majority (55% of gun deaths) with safe storage + veteran focus. National concealed-carry reciprocity. Keep + enforce prohibited-person rules with a restoration path for nonviolent felons. Harden schools + fix the response failures. Fund mental health — the actual problem. Criminal-supply enforcement lives on the Crime plan.',
     href: '/issues/second-amendment',
   },
-] as const
-
-const UPCOMING = [
-  { icon: '🤰', label: 'Abortion' },
+  {
+    icon: '🤰',
+    title: 'Abortion',
+    oneLiner: 'One honest line, then government steps back. Legal nationwide through 15 weeks (where ~93% of abortions already occur and most of the developed world sits), restricted after — enforced through medical regulation, not the criminal courts. Real exceptions at any stage: life, health, rape, incest, fatal fetal anomaly. Never prosecute the woman or the good-faith doctor; emergency + miscarriage care always protected. Government otherwise out — no surveillance, no funding, no Planned Parenthood money. Fund what actually reduces abortion instead: contraception, honest sex ed, radically easier adoption, real support for mothers who choose life.',
+    href: '/issues/abortion',
+  },
 ] as const
 
 const THREADS = [
@@ -103,6 +105,12 @@ const THREADS = [
     description: 'On guns we restrict the genuinely dangerous — criminals and the dangerously ill — with real due process, and leave law-abiding owners alone: no bans by weapon type, checks that verify the buyer without building a registry. The same person-not-object logic runs through the platform — pursue the trafficker, treat the illness, and put the money where the deaths (mostly suicides) actually are.',
     appliesTo: ['Second Amendment', 'Crime & Criminal Justice', 'Healthcare Access'],
   },
+  {
+    icon: '🕊️',
+    title: 'The honest middle the poles refuse to name',
+    description: 'On the hardest issue — abortion — we hold what most Americans hold at once: the early decision belongs to the woman, and the state has a real interest later. One national 15-week line with real exceptions, enforced through medicine not prison, while government funds the alternatives that actually reduce abortion. Honest about the weight of it, and out of the criminal courts.',
+    appliesTo: ['Abortion', 'Healthcare Access', 'Education'],
+  },
 ] as const
 
 export default function SocialPillarPage() {
@@ -112,12 +120,11 @@ export default function SocialPillarPage() {
         badge="🤝 Social Pillar"
         badgeColor="var(--green)"
         title={<>Strong People. <span style={{ color: 'var(--green)' }}>Strong Country.</span></>}
-        subtitle="The issues that shape daily life — education, crime, drugs, healthcare access, guns, and the hardest debates. We start with the one that decides everything downstream: how we raise and equip the next generation. More sub-issues ship on a rolling basis."
+        subtitle="The issues that shape daily life — education, crime, drug policy, healthcare access, the Second Amendment, and abortion. Six sub-issues, all shipped. One principle: invest in people, equip them to thrive, and meet the hardest debates with the honest middle the poles refuse to name."
       />
 
       <SignaturePrinciple />
       <SubIssuesGrid />
-      <UpcomingGrid />
       <CrossThreadsGrid />
       <PillarCTA />
     </div>
@@ -149,33 +156,12 @@ function SubIssuesGrid() {
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-black mb-3">Shipped Sub-Issues</h2>
-          <p className="text-[var(--muted)]">Each links to the full plan.</p>
+          <h2 className="text-3xl font-black mb-3">The 6 Sub-Issues</h2>
+          <p className="text-[var(--muted)]">All shipped. Each links to the full plan.</p>
         </div>
-        <div className="grid grid-cols-1 gap-5 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SUB_ISSUES.map(s => (
             <SubIssueCard key={s.title} {...s} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function UpcomingGrid() {
-  return (
-    <section className="pb-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-6">
-          <p className="text-sm font-bold uppercase tracking-widest" style={{ color: 'var(--muted)' }}>In Development</p>
-        </div>
-        <div className="flex flex-wrap gap-3 justify-center">
-          {UPCOMING.map(u => (
-            <span key={u.label}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--muted)' }}>
-              <span>{u.icon}</span>{u.label}
-            </span>
           ))}
         </div>
       </div>

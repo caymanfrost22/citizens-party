@@ -54,6 +54,9 @@ const issueRoutes: Record<string, string> = {
   'Gun Rights': '/issues/second-amendment',
   'Gun Control': '/issues/second-amendment',
   '2A': '/issues/second-amendment',
+  'Abortion': '/issues/abortion',
+  'Reproductive Rights': '/issues/abortion',
+  'Pro-Life': '/issues/abortion',
 }
 
 export default async function IssuesPage() {
