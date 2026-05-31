@@ -57,6 +57,19 @@ const issueRoutes: Record<string, string> = {
   'Abortion': '/issues/abortion',
   'Reproductive Rights': '/issues/abortion',
   'Pro-Life': '/issues/abortion',
+  // Foreign pillar
+  'Military Posture': '/issues/military-posture',
+  'Military Posture & Defense Doctrine': '/issues/military-posture',
+  'Defense Doctrine': '/issues/military-posture',
+  'Military Spending': '/issues/military-posture',
+  'Pentagon Audit': '/issues/military-posture',
+  'NATO': '/issues/military-posture',
+  'Alliances': '/issues/military-posture',
+  'War Powers': '/issues/military-posture',
+  'AUMF': '/issues/military-posture',
+  'Foreign Policy': '/issues/foreign',
+  'Veterans': '/issues/military-posture',
+  'GI Bill': '/issues/military-posture',
 }
 
 export default async function IssuesPage() {

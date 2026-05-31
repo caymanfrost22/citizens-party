@@ -59,14 +59,17 @@ All six Social sub-issues shipped: Education (21 mech) · Crime & Criminal Justi
 
 **NEXT PILLAR — pick up here:** Two pillars remain — **Foreign** (military spending/Pentagon audit, Ukraine/Israel/foreign wars, China policy, NATO/alliances — color `#7b2d8b`) and **Environment** (climate/emissions, energy policy, public lands — color `#52b788`). Recommend Foreign next (4 sub-issues, more D/R differentiation). When starting a new pillar: create `app/issues/{pillar}/page.tsx` hub, add nav link with pillar emoji, flip the pillar in `/platform` PILLARS from 'planned' to 'in_progress', follow the full 8-step wiring checklist. Same walkthrough methodology (canonical section at bottom). When adding a sub-issue to a hub, add it to that hub's `SUB_ISSUES` array.
 
-### 🌍 Foreign
-Master sub-issue list:
-| # | Sub-issue | Status |
-|---|-----------|--------|
-| 1 | Military spending / Pentagon audit | partial in `/issues/debt-spending` — needs own page |
-| 2 | Ukraine / Israel / foreign wars | not started |
-| 3 | China policy | not started |
-| 4 | NATO / alliances | not started |
+### 🌍 Foreign (IN PROGRESS — hub shipped, Military Posture shipped 2026-05-31)
+Hub: `/issues/foreign`. Pillar color `#7b2d8b`. Status flipped on `/platform` → `in_progress`. Sub-issue scope reframed during walkthrough: original "Military spending / Pentagon audit" entry merged into existing `/issues/debt-spending` (budget + audit teeth) and replaced with **Military Posture & Defense Doctrine** — strategy, alliances, war powers, nuclear, vets, supply chain. Avoids duplication.
+
+| Order | Sub-issue | Status | Notes |
+|---|-----------|--------|---|
+| done | Military Posture & Defense Doctrine | `/issues/military-posture` shipped | 14 mechanisms — locked stack below |
+| next | Ukraine / Israel / foreign wars | not started | Apply mutual-defense-only doctrine to active conflicts |
+| next | China policy | not started | Strategic competition without forever war; pairs with onshore supply |
+| next | NATO & alliances | not started | Formalize pay-to-play, mutual-defense only, expand to former adversaries |
+
+**🛡️ Military Posture & Defense Doctrine (DONE — 2026-05-31):** 14 mechanisms. Frame = peace through strength, honest strength + "we defend, we don't attack" + "no permanent enemies." Budget + Pentagon audit cross-linked to `/issues/debt-spending`, not duplicated (M1). Pay-to-play alliances — NATO 2% becomes hard floor, miss two consecutive years = lose Article 5; bilateral allies sign cost-share priced to deployed US capability (M2). Mutual-defense only — never offensive support, never blank check (M3). Bases = US strategic use OR host pays OR close — would-we-put-it-here-today test (M4). War-powers split: defensive response to imminent attack = President's autonomous authority; offensive ops or joining another nation's fight = Article I declaration with 60-day clock; repeal 2001 + 2002 AUMFs (M5). Bright-line trigger: "imminent attack" = armed attack on US territory OR US forces deployed under existing treaty OR US-flagged assets — nothing else qualifies (M6). Alliance expansion — open door to former adversaries (Russia, China long-term) on conditions: no active aggression, market access + rule of law, arms-control compliance (M7). Concrete Russia offer — conditional NATO partner status tied to Ukraine settlement + New START successor + decade-long rule-of-law markers (M8, spiciest position on page). Modernize triad (Columbia subs, Sentinel ICBM, B-21), hold ~1,550 deployed warheads at New START ceiling, pursue successor treaty (M9). Extended deterrence as paid service — allies wanting US nuclear umbrella (SK, Japan, Taiwan, Saudi, Poland) pay for warheads + delivery sized to threat without proliferating beyond US control (M10, NPT-compliant). Procurement reform applies bureaucracy-reform E-all pattern — fixed-price default, commercial-first, OTA $500M cap, pre-qualified vendor pools + 30-day mini-bids, prize-model, outcome contracts + performance bonds >$50M, 5yr program sunset (M11). Onshore/friendshore critical supply (chips, rare earths, munitions, pharma, shipbuilding, transformers) + strategic stockpile rebuild + Jones Act review (M12). Restored + modernized GI Bill (any accredited public university or funded trade-school path, transferable to spouse/children, COL-indexed stipend) + VA + community-care choice + mental-health funding to veteran suicide crisis (17–22/day) + housing-first homeless vets (M13). Pentagon IG statutory independence + criminal penalty for whistleblower retaliation + public real-time spending dashboard with AI anomaly flagging — same package as Governance bureaucracy-reform (M14). Catchphrase: "Strong enough that no one tries. Honest enough that no one pays for wars they didn't pick." Sidebar callout addresses "isn't Russia open-door naive?" head-on. Cross-links: debt-spending (budget), bureaucracy-reform (procurement + IG), lobbying-ban (defense lobby), healthcare-access (VA), education (GI Bill), immigration (single citizenship for defense officials).
 
 ### 🌿 Environment
 Master sub-issue list:

@@ -58,11 +58,11 @@ const PILLARS: Pillar[] = [
     icon: '🌍',
     title: 'Foreign',
     color: '#7b2d8b',
-    catchphrase: 'Honest alliances, audited Pentagon, no forever wars.',
-    subtitle: 'Planned. Sub-issues queued: military spending + Pentagon audit, Ukraine/Israel/foreign wars, China policy, NATO + alliances.',
-    status: 'planned',
+    catchphrase: 'Strong enough that no one tries. Honest enough that no one pays for wars they didn\'t pick.',
+    subtitle: 'In progress. Military Posture & Defense Doctrine shipped — peace through strength, allies pay their share, mutual-defense only, Article I restored. Three queued: Ukraine/Israel/foreign wars, China policy, NATO + alliances.',
+    status: 'in_progress',
     subIssueCount: 4,
-    href: null,
+    href: '/issues/foreign',
   },
   {
     icon: '🌿',
@@ -149,6 +149,24 @@ const CATCHPHRASES: Catchphrase[] = [
     context: 'Equal per-student funding pooled statewide + federal floor + a national education lottery to end zip-code apartheid. Modern curriculum — personal finance, home ec, shop/trades, real history, tech in every class. Capped college loans ($40K / 4%), no bailout, no bloat.',
     pillar: 'Social',
     color: 'var(--green)',
+  },
+  {
+    text: 'We defend. We don\'t attack.',
+    context: 'Mutual-defense only — never offensive support. Repelling an imminent armed attack on US territory, forces, or flagged assets is the President\'s authority. Offensive operations or joining another nation\'s fight require Article I declaration by Congress. The 2001 and 2002 AUMFs get repealed. Twenty-four years of forever war end.',
+    pillar: 'Foreign',
+    color: '#7b2d8b',
+  },
+  {
+    text: 'Allies pay their share.',
+    context: 'NATO 2% becomes a hard floor, not a target — miss it two years running, lose Article 5. Bilateral allies sign cost-share agreements priced to the actual US capability protecting them. Bases get host-paid or strategic-use justification or they close. Extended deterrence becomes a paid product. Free-rider era ends.',
+    pillar: 'Foreign',
+    color: '#7b2d8b',
+  },
+  {
+    text: 'No permanent enemies.',
+    context: 'Alliances keep peace; refusing to expand them creates the next war. Open door — on conditions — to former adversaries including Russia: verified Ukraine settlement, arms-control restoration, decade-long rule-of-law markers. If they refuse we lose nothing. If they accept we end a war and rewire the next century.',
+    pillar: 'Foreign',
+    color: '#7b2d8b',
   },
 ]
 
