@@ -14,10 +14,15 @@ const SUB_ISSUES = [
     oneLiner: 'Energy abundance — build everything that works. Nuclear at scale (SMRs + Gen IV + license reform + 80-year extensions + restart shutdowns). Gas as bridge + baseload, LNG export freeze lifted. Domestic oil where economic + federal-land moratoriums ended + SPR refilled. Coal exits on market terms, runs clean where it earns its place. Renewables compete on price, IRA credits sunsetted. 12-month permitting cap on every energy source. Interstate transmission + FERC primacy + grid hardening. EV mandate repealed, charging infrastructure as public good. Geothermal at scale + fusion R&D + advanced fission. Strategic reserves (oil, gas, critical minerals, uranium, onshore fuel cycle). Technology-neutral sunset-based subsidies. Moonshot research including the wireless-power-transmission long tail Tesla never got to finish. Hyperscaler accountability — big tech builds the power it uses.',
     href: '/issues/energy',
   },
+  {
+    icon: '🌡️',
+    title: 'Climate / Emissions',
+    oneLiner: 'Cleaner air. Cleaner water. Honest accounting. Climate is changing — observable, measurable. Natural cycles dominant, real but smaller human contribution than catastrophist consensus claims. Stewardship frame, not catastrophism. Revenue-neutral carbon dividend — 100% back to households, never a government slush fund. No net-zero mandates, directional intensity goals instead. Paris engaged + reformed from inside, top-emitter accountability, BCA enforcement. Border carbon adjustment on non-pricing jurisdictions stops emissions leakage to China. Methane enforced on largest emitters, three million abandoned wells plugged. Adaptation funded seriously. Carbon-capture + DAC research scaled, deployment subsidies sunsetted. Solar-radiation-management research as break-glass optionality, no deployment. NO climate-emergency executive powers. Uniform clean-air-and-water standards every zip code. Direct emissions reporting only — no Scope-3 theater. Fund the science honestly including skeptical inquiry. Take care of the country we live in.',
+    href: '/issues/climate',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '🌡️', title: 'Climate / Emissions', note: 'Honest accounting of emissions on top of the energy stack. Carbon pricing or alternatives, methane enforcement, international cooperation tracks (cross-link China Policy M10). Adaptation and resilience funded.' },
   { icon: '🏞️', title: 'Public Lands & Environmental Regulation', note: 'NPS + USFS + BLM stewardship, conservation that respects multi-use, sound EPA regulation without precautionary creep, water rights modernized, wildfire policy that prevents not just suppresses.' },
 ] as const
 
@@ -52,6 +57,24 @@ const THREADS = [
     description: 'The next energy leap will not come from what we already build; it will come from research we are not seriously funding. We expand ARPA-E significantly and explicitly fund the long-tail research — including the wireless power transmission Nikola Tesla pioneered (resonant induction is settled engineering at short range; the long-range version was defunded out for political rather than scientific reasons), space-based solar, room-temperature superconductors, advanced battery chemistry, direct air capture. Most moonshots fail. The few that do not are why the United States is still a frontier-technology economy.',
     appliesTo: ['Energy Policy'],
   },
+  {
+    icon: '🌳',
+    title: 'Stewardship, not catastrophism',
+    description: 'The climate is changing — measurably, observably. We are honest about that. We are also honest about what the science actually says on attribution: natural cycles are doing most of the work, the human contribution is real but smaller than catastrophist rhetoric claims, and thirty-five years of "ten years to act" forecasts that never came true have earned the skepticism the political class refuses to extend. The frame is stewardship — take care of the country we live in — not catastrophism. Cleaner air, cleaner water, cleaner soil, more resilient infrastructure, methane wins, abandoned wells plugged. Good for Americans alive today regardless of attribution.',
+    appliesTo: ['Climate / Emissions'],
+  },
+  {
+    icon: '💸',
+    title: 'Carbon dividend — the check goes back to households',
+    description: 'If we price carbon at all, we do it the one way that does not become a permanent government revenue grab. Carbon fee at extraction or import, 100% returned to American households as a quarterly per-capita dividend, every legal adult resident getting the same check. Progressive in effect, market-mechanism, no slush fund. The structure forecloses the central political failure of every other pricing mechanism, which is that the revenue becomes a fund the majority party spends on whatever it was going to spend on anyway.',
+    appliesTo: ['Climate / Emissions'],
+  },
+  {
+    icon: '🛡️',
+    title: 'No climate-emergency powers. Ever.',
+    description: 'Climate is a multi-decade engineering problem. It is not an emergency in the legal sense that emergency-powers doctrines were designed for. We codify in statute: no president may invoke climate-emergency powers to bypass Congress on spending, mandate, or expropriation. The same restoration of Article I that runs through the Foreign pillar, applied here. Climate policy goes through Congress, on the record, with a vote.',
+    appliesTo: ['Climate / Emissions'],
+  },
 ] as const
 
 export default function EnvironmentPillarPage() {
@@ -61,7 +84,7 @@ export default function EnvironmentPillarPage() {
         badge="🌿 Environment Pillar"
         badgeColor={ENV}
         title={<>Energy Abundance. <span style={{ color: ENV }}>Real Stewardship.</span></>}
-        subtitle="Both parties have run the same energy-and-environment failure mode for a generation — single-bet politics that builds nothing, costs everything, and leaves the country less secure. We change the frame. Build everything that works at speed. Sunset the subsidies. Fund the moonshots. Build the grid. Hyperscaler pays for hyperscaler load. Honest accounting on emissions, real stewardship on public lands, conservation that respects multi-use. One sub-issue shipped — Energy Policy. The rest queued below."
+        subtitle="Both parties have run the same energy-and-environment failure mode for a generation — single-bet politics that builds nothing, costs everything, and leaves the country less secure. We change the frame. Build everything that works at speed. Sunset the subsidies. Fund the moonshots. Build the grid. Hyperscaler pays for hyperscaler load. Honest climate accounting — stewardship not catastrophism, market mechanisms not mandates. Two sub-issues shipped — Energy and Climate. Public-lands stewardship queued below."
       />
 
       <SignaturePrinciple />
@@ -99,7 +122,7 @@ function SubIssuesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-black mb-3">Shipped Sub-Issues</h2>
-          <p className="text-[var(--muted)]">One shipped. Two queued.</p>
+          <p className="text-[var(--muted)]">Two shipped. One queued.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SUB_ISSUES.map(s => (

@@ -69,7 +69,7 @@ const PILLARS: Pillar[] = [
     title: 'Environment',
     color: '#52b788',
     catchphrase: 'Energy abundance. Honest accounting. American grid.',
-    subtitle: 'In progress. Energy Policy shipped — build everything that works, 12-month permitting cap, interstate grid, sunset the subsidies, big tech builds its own power. Two queued: climate/emissions accounting, public lands + environmental regulation.',
+    subtitle: 'In progress. Two shipped: Energy Policy and Climate / Emissions. Build everything that works, stewardship not catastrophism, revenue-neutral carbon dividend back to households, no climate-emergency powers. One queued: public lands + environmental regulation.',
     status: 'in_progress',
     subIssueCount: 3,
     href: '/issues/environment',
@@ -207,6 +207,12 @@ const CATCHPHRASES: Catchphrase[] = [
   {
     text: 'Big tech builds the power it uses.',
     context: 'Data centers are the fastest-growing source of US electricity demand. Above a threshold, every new or expanded data center must either co-locate with dedicated generation it pays for in full, or sign long-term contracts at full long-run marginal cost. No socializing AI training load onto residential ratepayers. Microsoft restarting Three Mile Island is the proof case.',
+    pillar: 'Environment',
+    color: '#52b788',
+  },
+  {
+    text: 'Cleaner air. Cleaner water. Honest accounting.',
+    context: 'Climate is changing — observable, measurable. Natural cycles dominant, real but smaller human contribution than catastrophist consensus claims. Stewardship frame, not catastrophism. Revenue-neutral carbon dividend with the check going back to households, never a slush fund. No net-zero mandates. Paris reformed from inside, border carbon adjustment to stop leakage. Methane easy wins, three million abandoned wells plugged. Adaptation funded. No climate-emergency executive powers, ever. Uniform standards every zip code. Fund the science honestly including skeptical inquiry.',
     pillar: 'Environment',
     color: '#52b788',
   },

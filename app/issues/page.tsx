@@ -129,6 +129,19 @@ const issueRoutes: Record<string, string> = {
   'Data Centers': '/issues/energy',
   'Environment': '/issues/environment',
   'Environmental Policy': '/issues/environment',
+  'Climate': '/issues/climate',
+  'Climate Change': '/issues/climate',
+  'Emissions': '/issues/climate',
+  'Carbon': '/issues/climate',
+  'Carbon Tax': '/issues/climate',
+  'Carbon Dividend': '/issues/climate',
+  'Paris Agreement': '/issues/climate',
+  'Methane': '/issues/climate',
+  'Border Carbon Adjustment': '/issues/climate',
+  'BCA': '/issues/climate',
+  'Greenhouse Gas': '/issues/climate',
+  'GHG': '/issues/climate',
+  'Net Zero': '/issues/climate',
 }
 
 export default async function IssuesPage() {
