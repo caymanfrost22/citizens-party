@@ -14,10 +14,15 @@ const SUB_ISSUES = [
     oneLiner: 'Peace through strength — strength through honest alliances. Allies who want US protection pay for it: NATO 2% becomes a hard floor, non-payers lose Article 5. Mutual-defense only — if an ally is attacked we help defend, if they want to attack we sit out. We never start wars. War powers split: defensive response to an imminent armed attack on US territory, forces, or flagged assets is the President\'s call; offensive war or joining another nation\'s fight requires Article I declaration. Repeal the 2001 + 2002 AUMFs. Open door to former adversaries including Russia — no permanent enemies, alliances keep the peace. Modernize the triad, hold ~1,550 warheads, expand only if allies pay for the extended-deterrence umbrella they want. Onshore the critical supply chain. Restore + modernize the GI Bill. Budget + Pentagon audit live on /issues/debt-spending.',
     href: '/issues/military-posture',
   },
+  {
+    icon: '🇺🇦',
+    title: 'Ukraine / Israel / Foreign Wars',
+    oneLiner: 'Apply the doctrine to the wars we\'re actually in. Ukraine to a negotiated settlement structured as accountable lend-lease — not unconditional victory, not abandonment. Israel as the ally it is: defensive aid unconditional, offensive aid held to the civilian-protection standards existing US law already requires. Gaza: hostage deal + sustainable ceasefire + Abraham Accords expansion tied to a real Palestinian track, no US troops. Iran without nuclear weapons through diplomacy + trade integration, not thirty more years of sanctions that never worked. Proxy network: defensive force protection only + withdraw US forces from range. Article I restored. Every aid package standalone, sunsetted, audited. Humanitarian separated from military. State Department rebuilt. No US-funded reconstruction unless host pays or US benefits. Taiwan: strategic ambiguity stays, costs split honestly. AFRICOM: same bases test, consolidate the rest.',
+    href: '/issues/foreign-wars',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '🇺🇦', title: 'Ukraine / Israel / Foreign Wars', note: 'Apply the mutual-defense-only doctrine to active conflicts. Defensive aid yes, blank checks no. No US ground forces in another country\'s war without Article I declaration.' },
   { icon: '🇨🇳', title: 'China Policy', note: 'Strategic competition without forever war. Hard onshore critical supply, technology export controls on dual-use, hold Taiwan deterrence within mutual-defense limits, open door to alliance expansion long-term.' },
   { icon: '🤝', title: 'NATO & Alliances', note: 'Pay-to-play formalized — 2% hard floor or out. Mutual-defense only. Expand to former adversaries on conditions. Renegotiate Status of Forces agreements to host-pays-or-strategic-use standard.' },
 ] as const
@@ -59,6 +64,24 @@ const THREADS = [
     description: 'A modernized GI Bill that pays for trade school or college, a VA that uses community-care choice when its own system falls short, real mental-health funding for the suicide crisis that kills more veterans than combat ever did, and housing-first for homeless vets. We don\'t get to send Americans to fight if we won\'t take care of them when they come home.',
     appliesTo: ['Military Posture & Defense Doctrine'],
   },
+  {
+    icon: '🕊️',
+    title: 'Sanctions never worked. Trade and prosperity have.',
+    description: 'Forty-five years of sanctions on Iran produced an Iran closer to a bomb than ever. Libya, Brazil-Argentina, post-Soviet states, South Africa — every successful non-proliferation case in modern history ran the opposite direction: weapons given up in exchange for integration, normalization, market access. We take the goal both parties claim and use the instrument that has actually worked.',
+    appliesTo: ['Ukraine / Israel / Foreign Wars'],
+  },
+  {
+    icon: '📜',
+    title: 'No more omnibus aid bills',
+    description: 'Every foreign-war aid package gets the same treatment our Governance pillar applies to every other expenditure — single subject, standalone bill, 72-hour read time, CBO score, end-use monitoring published quarterly, 12-to-24-month sunset requiring a fresh vote. Aid that cannot survive an honest re-vote does not deserve to keep flowing. Aid that can should not be hidden in a thousand-page bill nobody read.',
+    appliesTo: ['Ukraine / Israel / Foreign Wars', 'Military Posture & Defense Doctrine'],
+  },
+  {
+    icon: '💰',
+    title: 'We don\'t pay to rebuild other countries',
+    description: 'Same logic our Military Posture page applies to bases — strategic use, host-paid, or close — applied to dollars. The United States does not fund reconstruction abroad unless the host pays a meaningful share or there is a clear US strategic benefit. Humanitarian aid (keeping civilians alive in a war) is separate and continues; nation-building after one is not the same instrument and is not our bill.',
+    appliesTo: ['Ukraine / Israel / Foreign Wars'],
+  },
 ] as const
 
 export default function ForeignPillarPage() {
@@ -68,7 +91,7 @@ export default function ForeignPillarPage() {
         badge="🌍 Foreign Pillar"
         badgeColor={FOREIGN}
         title={<>Strong Enough That <span style={{ color: FOREIGN }}>No One Tries.</span></>}
-        subtitle="Peace through strength — and strength through honest alliances. Allies pay their share. We defend, we don't attack. We never start wars, and we don't join other nations' wars without an Article I declaration. No permanent enemies — alliances keep the peace. Modernized deterrent, onshore critical supply, restored GI Bill. One sub-issue shipped — the rest queued below."
+        subtitle="Peace through strength — and strength through honest alliances. Allies pay their share. We defend, we don't attack. We never start wars, and we don't join other nations' wars without an Article I declaration. No permanent enemies — alliances keep the peace. Modernized deterrent, onshore critical supply, restored GI Bill. Two sub-issues shipped: the doctrine and its application to the wars we are actually in."
       />
 
       <SignaturePrinciple />
@@ -106,7 +129,7 @@ function SubIssuesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-black mb-3">Shipped Sub-Issues</h2>
-          <p className="text-[var(--muted)]">One shipped. Three queued.</p>
+          <p className="text-[var(--muted)]">Two shipped. Two queued.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SUB_ISSUES.map(s => (

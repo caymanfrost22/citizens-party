@@ -70,6 +70,18 @@ const issueRoutes: Record<string, string> = {
   'Foreign Policy': '/issues/foreign',
   'Veterans': '/issues/military-posture',
   'GI Bill': '/issues/military-posture',
+  'Ukraine': '/issues/foreign-wars',
+  'Israel': '/issues/foreign-wars',
+  'Gaza': '/issues/foreign-wars',
+  'Iran': '/issues/foreign-wars',
+  'Foreign Wars': '/issues/foreign-wars',
+  'Foreign Aid': '/issues/foreign-wars',
+  'Taiwan': '/issues/foreign-wars',
+  'AFRICOM': '/issues/foreign-wars',
+  'Middle East': '/issues/foreign-wars',
+  'Russia-Ukraine': '/issues/foreign-wars',
+  'Houthis': '/issues/foreign-wars',
+  'Hezbollah': '/issues/foreign-wars',
 }
 
 export default async function IssuesPage() {

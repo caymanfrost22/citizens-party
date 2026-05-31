@@ -59,7 +59,7 @@ const PILLARS: Pillar[] = [
     title: 'Foreign',
     color: '#7b2d8b',
     catchphrase: 'Strong enough that no one tries. Honest enough that no one pays for wars they didn\'t pick.',
-    subtitle: 'In progress. Military Posture & Defense Doctrine shipped — peace through strength, allies pay their share, mutual-defense only, Article I restored. Three queued: Ukraine/Israel/foreign wars, China policy, NATO + alliances.',
+    subtitle: 'In progress. Two shipped: Military Posture & Defense Doctrine, and Ukraine/Israel/Foreign Wars — applying the doctrine to active conflicts. Two queued: China policy, NATO + alliances.',
     status: 'in_progress',
     subIssueCount: 4,
     href: '/issues/foreign',
@@ -165,6 +165,12 @@ const CATCHPHRASES: Catchphrase[] = [
   {
     text: 'No permanent enemies.',
     context: 'Alliances keep peace; refusing to expand them creates the next war. Open door — on conditions — to former adversaries including Russia: verified Ukraine settlement, arms-control restoration, decade-long rule-of-law markers. If they refuse we lose nothing. If they accept we end a war and rewire the next century.',
+    pillar: 'Foreign',
+    color: '#7b2d8b',
+  },
+  {
+    text: 'Defensive aid yes. Blank checks no.',
+    context: 'Ukraine to a negotiated settlement structured as accountable lend-lease. Israel ally + Iron Dome unconditional, offensive aid conditioned on the civilian-protection standards existing US law already requires. Iran without nuclear weapons through diplomacy + trade integration — the instrument that has actually worked on non-proliferation. Every aid package standalone, sunsetted, audited. The US does not fund reconstruction unless we benefit or the host pays.',
     pillar: 'Foreign',
     color: '#7b2d8b',
   },
