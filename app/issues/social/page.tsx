@@ -18,10 +18,15 @@ const SUB_ISSUES = [
     oneLiner: 'Certainty over severity — the deterrent that actually works. Violent stay in, nonviolent diverted, escalation ladder for repeat offenders. Fund + professionalize police, grants tied to crimes solved. Reform qualified immunity + national decertification registry + body cams. End mandatory minimums for nonviolent, end private prisons. Mandatory in-prison rehab + risk-based pretrial (no cash bail). Treatment courts + rebuilt mental-health facilities + psychedelic-assisted therapy. Victims first with fair restitution. Death penalty narrowed to worst-of-worst under conclusive-evidence standard. Juveniles never tried as adults — service-corps rehab.',
     href: '/issues/crime',
   },
+  {
+    icon: '💊',
+    title: 'Drug Policy',
+    oneLiner: 'Draw the line by acute lethality. Legalize + regulate the safe-to-dose tier (cannabis, cocaine, LSD, psilocybin, MDMA, mescaline) like alcohol — licensed, 21+, purity-tested, taxed. The crime becomes unlicensed sale. Tax the legal market to fund on-demand treatment + recovery. Keep fentanyl, heroin, meth illegal — multi-front supply war + fatal-dose dealer liability. Users get mandatory treatment, not prison. Narcan as a bridge, no injection sites. Prescription opioids stay controlled medicine. Honest, limited cannabis-justice relief. Voluntary intoxication is an aggravating factor, never an excuse.',
+    href: '/issues/drug-policy',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '💊', label: 'Drug Policy' },
   { icon: '🏥', label: 'Healthcare Access' },
   { icon: '🔫', label: 'Second Amendment' },
   { icon: '🤰', label: 'Abortion' },
@@ -69,6 +74,12 @@ const THREADS = [
     title: 'A path out, not just a cell',
     description: 'Funded trade schools, the juvenile service corps, in-prison job training, guaranteed reentry placement, and treatment courts all share one logic: give people a skill, a path, and treatment for what is actually driving the behavior. Crime falls when the alternative to crime is real.',
     appliesTo: ['Education', 'Crime & Criminal Justice'],
+  },
+  {
+    icon: '⚖️',
+    title: 'Honesty over slogans, responsibility over excuses',
+    description: 'Drug policy drawn by lethality instead of culture-war reflex — regulate what can be dosed safely, hunt what kills by accident, and tax the legal market to fund treatment. Paired with hard personal responsibility: voluntary intoxication is an aggravating factor, never a defense. Freedom and accountability arrive together.',
+    appliesTo: ['Drug Policy', 'Crime & Criminal Justice'],
   },
 ] as const
 
