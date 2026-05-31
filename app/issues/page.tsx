@@ -34,6 +34,11 @@ const issueRoutes: Record<string, string> = {
   'K-12 Education': '/issues/education',
   'Student Debt': '/issues/education',
   'School Choice': '/issues/education',
+  'Crime': '/issues/crime',
+  'Crime & Criminal Justice': '/issues/crime',
+  'Criminal Justice': '/issues/crime',
+  'Policing': '/issues/crime',
+  'Public Safety': '/issues/crime',
 }
 
 export default async function IssuesPage() {

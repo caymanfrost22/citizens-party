@@ -12,10 +12,15 @@ const SUB_ISSUES = [
     oneLiner: 'Empower the Department of Education to set a modernized national curriculum — personal finance, home ec, shop/trades, real history, tech in every class. Pool school funding statewide + federal floor + national education lottery to end zip-code apartheid. Living-wage teacher pay, renewable contracts. Fund trade schools. Affordable lean public universities, no DEI bloat. Private universities self-funded. Cap loans $40K / 4%, refinance existing debt, no bailout.',
     href: '/issues/education',
   },
+  {
+    icon: '⚖️',
+    title: 'Crime & Criminal Justice',
+    oneLiner: 'Certainty over severity — the deterrent that actually works. Violent stay in, nonviolent diverted, escalation ladder for repeat offenders. Fund + professionalize police, grants tied to crimes solved. Reform qualified immunity + national decertification registry + body cams. End mandatory minimums for nonviolent, end private prisons. Mandatory in-prison rehab + risk-based pretrial (no cash bail). Treatment courts + rebuilt mental-health facilities + psychedelic-assisted therapy. Victims first with fair restitution. Death penalty narrowed to worst-of-worst under conclusive-evidence standard. Juveniles never tried as adults — service-corps rehab.',
+    href: '/issues/crime',
+  },
 ] as const
 
 const UPCOMING = [
-  { icon: '⚖️', label: 'Crime + Criminal Justice' },
   { icon: '💊', label: 'Drug Policy' },
   { icon: '🏥', label: 'Healthcare Access' },
   { icon: '🔫', label: 'Second Amendment' },
@@ -52,6 +57,18 @@ const THREADS = [
     title: 'Shared identity and honest heritage',
     description: 'The Pledge of Allegiance every morning (opt-out preserved per Barnette), the founding\'s Judeo-Christian heritage taught as history not doctrine, and fairness in girls\' sports decided on a sex-based standard. A diverse country still needs a shared civic identity — restored honestly, within the Constitution, not weaponized as a culture war.',
     appliesTo: ['Education'],
+  },
+  {
+    icon: '🎯',
+    title: 'Results over slogans',
+    description: 'On crime we do what the evidence proves: certainty of getting caught deters far better than harsh sentences, and rehabilitation cuts the 68% recidivism rate that "tough on crime" never touched. Tough on violent crime, smart on everything else — measured by crimes solved and reoffense avoided, not by which slogan wins the news cycle. The same outcomes-over-theater discipline the whole platform runs on.',
+    appliesTo: ['Crime & Criminal Justice'],
+  },
+  {
+    icon: '🌱',
+    title: 'A path out, not just a cell',
+    description: 'Funded trade schools, the juvenile service corps, in-prison job training, guaranteed reentry placement, and treatment courts all share one logic: give people a skill, a path, and treatment for what is actually driving the behavior. Crime falls when the alternative to crime is real.',
+    appliesTo: ['Education', 'Crime & Criminal Justice'],
   },
 ] as const
 
